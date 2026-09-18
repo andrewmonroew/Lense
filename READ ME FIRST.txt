@@ -1,0 +1,133 @@
+LENSE 1.0 alpha - READ ME FIRST
+===============================
+
+WHAT IT IS
+  A design tool for low-voltage networks on a floor plan: cameras, access
+  points, switches, NVRs, racks, wall drops, and the cable between them.
+
+  It is not a drawing program. Every line you draw is a real cable that
+  knows what it connects, how long it actually is, whether the device on
+  the end can power up, and what it costs to terminate.
+
+  It answers three questions a floor plan alone cannot:
+    - How much cable do I really pull?   (not just the flat measure)
+    - Will every PoE device turn on?     (per port, per class, per budget)
+    - What does the job cost?            (gear, cable, jacks, plugs, patch)
+
+
+FIRST FIVE MINUTES
+  1.  Ctrl+I   Import a floor plan image.
+  2.  C        Calibrate. Drag across something whose length you know (a
+               door, a wall), then type the real distance.
+               *** NOTHING MEASURES UNTIL YOU DO THIS. ***
+  3.  P        Place equipment. Right-click picks what is in your hand,
+               left-click drops it. It stays in hand - keep clicking.
+  4.  L        Draw cable. Click the rack, click any corners you want the
+               run to follow, double-click the device to finish.
+  5.  Read the Inventory panel for footage and cost. Ctrl+S to save.
+
+  Everything else below is detail. That is the whole workflow.
+
+
+TOOLS  (one key each, no modifier)
+  V   Select / move          M   Measure distance (drag, read status bar)
+  H   Pan the canvas         T   Label / zone
+  C   Calibrate scale        G   Lasso cables (dress a fan into a bundle)
+  P   Place equipment        K   Place camera
+  L   Draw cable             N   Place switch / NVR
+  B   Draw fiber link
+
+  Esc always gets you out - cancels what you are drawing, back to Select.
+
+
+MOUSE
+  Wheel              Zoom. (Touchpad too fast or slow? Settings > Navigation)
+  Middle-drag        Pan. So does holding Space, or the H tool.
+  Right-click        Context menu. On an armed placement tool it swaps what
+                     is in your hand without going back to the catalog.
+  Hover a bundle     Fans the cables apart so you can see inside it.
+  Drag a camera's
+  handle             Aims it. Its coverage cone follows.
+
+
+DRAWING CABLE  (L)
+  Click a device to start, click to add corners, then:
+    Double-click or Enter    finish the run
+    Ctrl+click on a bundle   follow that bundle home and finish there
+    Esc                      cancel
+
+  Ctrl+click is the one worth learning. Drawing ten drops back to the MDF
+  means tracing the same corridor ten times. Instead: start at the drop,
+  Ctrl+click the bundle already heading to the rack, done - it copies the
+  rest of the path and bundles itself with the others.
+
+  G (lasso) drags a line across a fan of separate runs and gathers them
+  into one shared point, so they draw as dressed cabling instead of a
+  starburst. X adds a corner to the selected cable at your cursor.
+
+
+WALL DROPS  (1 to 6 outlets)
+  Draw ONE run from the rack to a 6-port plate and you get SIX cables, one
+  per outlet, named (Wall Drop 3)-1 through -6. Ctrl+click branching does
+  the same. You do not draw them one at a time.
+
+  It only multiplies for home runs. The short leg from a plate out to the
+  AP or camera it serves stays a single cable, and outlets that already
+  have a run are not doubled up.
+  Turn it off in Settings > Behavior if you want manual control.
+
+
+RACKS
+  Right-click a rack > Open Rack Editor (or the button in Properties).
+  There you mount gear into RU slots, land field cables on panel ports,
+  and run patch cables between ports. Hold H to peek under the cables.
+
+
+WHAT THE NUMBERS MEAN
+  Cable length is not the flat measure. Each end of a run adds its own
+  vertical rise (getting up to the pathway and back down) plus a service
+  loop. A 150 ft run to a wall drop is really 185 ft of cable, and that is
+  what counts against the 328 ft limit. Defaults per category live in
+  Settings > Cable allowances; override any single object in Properties.
+
+  Termination is how cable lands on a thing: an RJ45 plug crimped on, or a
+  jack plus a patch cable. Patch panels and wall drops default to jacks,
+  active gear to RJ45. That is real hardware, so it is priced per
+  connection in the Inventory panel.
+
+  An amber ! badge on a device means a problem. The Design Validation
+  panel lists them all - usually a PoE device that will not power up on
+  the port it landed on. Click a row to jump to it.
+
+
+PANELS  (View menu toggles each)
+  Properties      Everything about what is selected. Edit it here.
+  Inventory       Live takeoff: gear, footage, terminations, cost.
+                  Unit prices are yours and persist between projects.
+  Object Explorer Flat list of everything in the project.
+  Validation      Every problem in the design, in one list.
+
+
+KEYBOARD
+  Ctrl+N  New project          Ctrl+Z  Undo
+  Ctrl+O  Open                 Ctrl+X  Redo   <- NOT Ctrl+Y
+  Ctrl+S  Save                 Ctrl+D  Duplicate selected
+  Ctrl+Shift+S  Save As        Del     Delete selected
+  Ctrl+I  Import floor plan    Ctrl+,  Settings
+  Ctrl+E  Export to image      F       Zoom to fit
+  Ctrl++  Zoom in              Ctrl+-  Zoom out
+  Space   Hold to pan          Esc     Cancel / back to Select
+  Enter   Finish the cable or zone you are drawing
+  X       Add a corner to the selected cable at the cursor
+
+
+GOTCHAS
+  - Uncalibrated project = no footage, no cost, no length warnings. Press C.
+  - Redo is Ctrl+X. Unusual, but that is the binding.
+  - Icons tiny on a huge floor plan? Settings > Icon size, or Fit to Floor
+    Plan. Cables and coverage stay in real feet regardless.
+  - A selected cable draws a dark casing so it stays visible on white.
+  - Deleting a cable frees the panel port it was on.
+  - Duplicating names the copy by number (Access Point 2), not "Copy".
+
+This is an alpha. Save often.

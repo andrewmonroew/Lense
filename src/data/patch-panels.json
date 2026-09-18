@@ -1,0 +1,26 @@
+[
+  {
+    "id": "generic-patch-panel-24",
+    "manufacturer": "Generic",
+    "model": "24-Port Cat6 Patch Panel",
+    "category": "patch-panel",
+    "ports": 24,
+    "ruSize": 1,
+    "msrp": 40,
+    "mountType": "Rack (19\")",
+    "dimensions": "482.6 x 44.5 x 88.9 mm",
+    "weight": "1.4 kg"
+  },
+  {
+    "id": "generic-patch-panel-48",
+    "manufacturer": "Generic",
+    "model": "48-Port Cat6 Patch Panel",
+    "category": "patch-panel",
+    "ports": 48,
+    "ruSize": 2,
+    "msrp": 75,
+    "mountType": "Rack (19\")",
+    "dimensions": "482.6 x 88.9 x 88.9 mm",
+    "weight": "2.5 kg"
+  }
+]

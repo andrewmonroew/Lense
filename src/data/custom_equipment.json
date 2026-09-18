@@ -1,0 +1,76 @@
+[
+    {
+        "id": "reolink-cx820",
+        "manufacturer": "Reolink",
+        "series": "CX ColorX",
+        "model": "CX820",
+        "category": "camera",
+        "type": "turret",
+        "resolution": "4K (8MP)",
+        "fov": {
+            "horizontal": 93.2,
+            "vertical": 48.2,
+            "diagonal": 111.6
+        },
+        "irRange": {
+            "meters": null,
+            "feet": null
+        },
+        "nightVision": "ColorX (True Color)",
+        "zoom": {
+            "type": "digital",
+            "optical": null
+        },
+        "mounting": [
+            "wall",
+            "ceiling"
+        ],
+        "ipRating": "IP67",
+        "ikRating": null,
+        "poe": true,
+        "maxPower": 12,
+        "msrp": 130,
+        "productUrl": "https://reolink.com/product/cx820/",
+        "imagePath": "images/reolink-cx820.jpg",
+        "dimensions": "\u03a6117.4 x 103.8 mm",
+        "weight": "515 g",
+        "operatingTemp": "-10\u00b0C to 55\u00b0C (14\u00b0F to 131\u00b0F)",
+        "audio": {
+            "microphone": true,
+            "speaker": true
+        },
+        "smartDetection": [
+            "Person",
+            "Vehicle",
+            "Animal"
+        ],
+        "localStorage": {
+            "microSdSlot": true,
+            "maxCapacityTb": 0.5
+        }
+    },
+    {
+        "id": "ubiquiti-unvr-pro",
+        "manufacturer": "Ubiquiti",
+        "model": "UNVR Pro",
+        "category": "nvr",
+        "msrp": 749.0,
+        "productUrl": "https://store.ui.com/us/en/products/unvr-pro",
+        "dimensions": "442 x 325 x 87 mm",
+        "weight": "9.2 kg",
+        "operatingTemp": "-5\u00b0C to 40\u00b0C (23\u00b0F to 104\u00b0F)",
+        "maxChannels": 60,
+        "driveBays": 7,
+        "builtInPoe": false,
+        "poePorts": 0,
+        "poeBudget": 0.0,
+        "ports": {
+            "rj45": 1,
+            "sfp": 1
+        },
+        "sfpPorts": 1,
+        "maxDriveCapacityTb": 16.0,
+        "raidSupport": true,
+        "imagePath": "images/ubiquiti-unvr-pro.png"
+    }
+]

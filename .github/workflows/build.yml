@@ -1,0 +1,134 @@
+# Tests every push, and builds the Windows executable.
+#
+#   push to main      -> Lense.exe attached to the run as a downloadable artifact
+#   push a tag v*     -> a GitHub Release with the exe and the quick-start sheet
+#   pull request      -> tests only
+#
+# Cutting a release is two commands:
+#     git tag v1.0-alpha
+#     git push origin v1.0-alpha
+name: build
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+# Read-only by default; only the release job is granted more, and only where it
+# needs it.
+permissions:
+  contents: read
+
+env:
+  PYTHON_VERSION: "3.12"
+
+jobs:
+  test:
+    name: tests (linux)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      # Qt needs these even to render offscreen -- without them PySide6 imports
+      # fine and then dies the moment a QApplication is constructed.
+      - name: Install Qt runtime libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            libegl1 libgl1 libxkbcommon0 libdbus-1-3 libglib2.0-0
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run the regression suite
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: python tests/test_regression.py
+
+  windows:
+    name: windows executable
+    needs: test
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # The suite is what proves the thing we are about to ship actually works,
+      # so it runs on the platform we ship, not only on Linux.
+      - name: Run the regression suite
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: python tests/test_regression.py
+
+      - name: Build Lense.exe
+        run: python -m PyInstaller --noconfirm Lense.spec
+
+      - name: Check the executable exists
+        shell: pwsh
+        run: |
+          if (-not (Test-Path dist\Lense.exe)) { throw "dist\Lense.exe was not produced" }
+          $size = (Get-Item dist\Lense.exe).Length / 1MB
+          Write-Host ("Built dist\Lense.exe ({0:N1} MB)" -f $size)
+
+      - name: Stage the quick-start sheet beside it
+        shell: pwsh
+        run: Copy-Item "READ ME FIRST.txt" dist\
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Lense-windows-${{ github.sha }}
+          path: |
+            dist/Lense.exe
+            dist/READ ME FIRST.txt
+          if-no-files-found: error
+          retention-days: 90
+
+  release:
+    name: publish release
+    needs: windows
+    # Only for a version tag, never for an ordinary push.
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write      # the only job that can write to the repository
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: Lense-windows-${{ github.sha }}
+          path: release
+
+      - name: Name the exe after the version
+        run: mv "release/Lense.exe" "release/Lense-${GITHUB_REF_NAME}.exe"
+
+      # GitHub's own CLI, already authenticated on the runner -- no third-party
+      # action in the release path.
+      - name: Create the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            "release/Lense-${GITHUB_REF_NAME}.exe" \
+            "release/READ ME FIRST.txt" \
+            --title "Lense $GITHUB_REF_NAME" \
+            --generate-notes \
+            --notes "Unsigned Windows build. SmartScreen will warn on first run: More info > Run anyway. Read the quick-start sheet attached below before you start."

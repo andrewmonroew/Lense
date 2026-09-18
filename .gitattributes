@@ -1,0 +1,12 @@
+# Normalise line endings; the quick-start sheet stays CRLF so Windows Notepad
+# renders it correctly however it is checked out.
+* text=auto
+# Only the sheet handed to Windows users needs forced CRLF; everything else is
+# left to git's normal normalisation.
+"READ ME FIRST.txt" text eol=crlf
+*.bat text eol=crlf
+*.sh text eol=lf
+*.png binary
+*.jpg binary
+*.ico binary
+*.wav binary

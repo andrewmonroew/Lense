@@ -1,0 +1,1112 @@
+[
+  {
+    "id": "ubiquiti-g5-bullet",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect G5",
+    "model": "G5 Bullet",
+    "type": "bullet",
+    "resolution": "2K (4MP)",
+    "fov": {
+      "horizontal": 84.4,
+      "vertical": 45.4,
+      "diagonal": 99.8
+    },
+    "irRange": {
+      "meters": 9,
+      "feet": 30
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "wall",
+      "ceiling",
+      "pole"
+    ],
+    "ipRating": "IP66",
+    "ikRating": null,
+    "poe": true,
+    "maxPower": 12.5,
+    "msrp": 129,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-g5-bullet",
+    "imagePath": "images/ubiquiti-g5-bullet.png",
+    "dimensions": "\u00d875.5 x 74.4 mm (without mount)",
+    "weight": "225 g",
+    "operatingTemp": "-20\u00b0C to 40\u00b0C (-4\u00b0F to 104\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": false
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": false,
+      "maxCapacityTb": null
+    }
+  },
+  {
+    "id": "ubiquiti-g5-dome",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect G5",
+    "model": "G5 Dome",
+    "type": "dome",
+    "resolution": "2K (4MP)",
+    "fov": {
+      "horizontal": 102.4,
+      "vertical": 54.9,
+      "diagonal": 120.6
+    },
+    "irRange": {
+      "meters": 9,
+      "feet": 30
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ipRating": "IP66",
+    "ikRating": "IK08",
+    "poe": true,
+    "maxPower": 12.5,
+    "msrp": 179,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-g5-dome",
+    "imagePath": "images/ubiquiti-g5-dome.png",
+    "dimensions": "\u00d8109.2 x 64.5 mm",
+    "weight": "370 g",
+    "operatingTemp": "-20\u00b0C to 40\u00b0C (-4\u00b0F to 104\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": false,
+      "maxCapacityTb": null
+    }
+  },
+  {
+    "id": "ubiquiti-g5-flex",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect G5",
+    "model": "G5 Flex",
+    "type": "dome",
+    "resolution": "2K (4MP)",
+    "fov": {
+      "horizontal": 102.4,
+      "vertical": 54.9,
+      "diagonal": 120.6
+    },
+    "irRange": {
+      "meters": 6,
+      "feet": 20
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "ceiling",
+      "wall",
+      "desk"
+    ],
+    "ipRating": "IP65",
+    "ikRating": null,
+    "poe": true,
+    "maxPower": 10,
+    "msrp": 129,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-g5-flex",
+    "imagePath": "images/ubiquiti-g5-flex.png",
+    "dimensions": "\u00d848 x 107.5 mm",
+    "weight": "170 g",
+    "operatingTemp": "-20\u00b0C to 40\u00b0C (-4\u00b0F to 104\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": false
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": false,
+      "maxCapacityTb": null
+    }
+  },
+  {
+    "id": "ubiquiti-g5-pro",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect G5",
+    "model": "G5 Pro",
+    "type": "dome",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 109.9,
+      "vertical": 60,
+      "diagonal": 127.7
+    },
+    "fovZoomed": {
+      "horizontal": 35,
+      "vertical": 19.8,
+      "diagonal": 40
+    },
+    "irRange": {
+      "meters": 25,
+      "feet": 82
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "optical",
+      "optical": 3
+    },
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ipRating": "IP65",
+    "ikRating": "IK04",
+    "poe": true,
+    "maxPower": 25,
+    "msrp": 379,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-g5-pro",
+    "imagePath": "images/ubiquiti-g5-pro.png",
+    "dimensions": "\u00d886 x 153.8 mm",
+    "weight": "670 g",
+    "operatingTemp": "-20\u00b0C to 50\u00b0C (-4\u00b0F to 122\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": false
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": false,
+      "maxCapacityTb": null
+    }
+  },
+  {
+    "id": "ubiquiti-g5-dome-ultra",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect G5",
+    "model": "G5 Dome Ultra",
+    "type": "dome",
+    "resolution": "2K (4MP)",
+    "fov": {
+      "horizontal": 102.4,
+      "vertical": 54.9,
+      "diagonal": 120.6
+    },
+    "irRange": {
+      "meters": 20,
+      "feet": 65
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ipRating": "IPX4",
+    "ikRating": "IK06",
+    "poe": true,
+    "maxPower": 4.2,
+    "msrp": 129,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-g5-dome-ultra",
+    "imagePath": "images/ubiquiti-g5-dome-ultra.png",
+    "dimensions": "\u00d863.6 x 68.2 mm",
+    "weight": "175 g",
+    "operatingTemp": "-20\u00b0C to 40\u00b0C (-4\u00b0F to 104\u00b0F)",
+    "audio": {
+      "microphone": false,
+      "speaker": false
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": false,
+      "maxCapacityTb": null
+    }
+  },
+  {
+    "id": "ubiquiti-g6-bullet",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect G6",
+    "model": "G6 Bullet",
+    "type": "bullet",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 109.9,
+      "vertical": 56.7,
+      "diagonal": 134.1
+    },
+    "irRange": {
+      "meters": 30,
+      "feet": 98
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "wall",
+      "ceiling",
+      "pole"
+    ],
+    "ipRating": "IP66",
+    "ikRating": null,
+    "poe": true,
+    "maxPower": 15,
+    "msrp": 199,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-g6-bullet",
+    "imagePath": "images/ubiquiti-g6-bullet.png",
+    "dimensions": "\u00d882 x 88.8 mm",
+    "weight": "587 g",
+    "operatingTemp": "-20\u00b0C to 50\u00b0C (-4\u00b0F to 122\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": false
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": false,
+      "maxCapacityTb": null
+    }
+  },
+  {
+    "id": "ubiquiti-g6-dome",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect G6",
+    "model": "G6 Dome",
+    "type": "dome",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 109.9,
+      "vertical": 56.7,
+      "diagonal": 134.1
+    },
+    "irRange": {
+      "meters": 30,
+      "feet": 98
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ipRating": "IP66",
+    "ikRating": "IK10",
+    "poe": true,
+    "maxPower": 15,
+    "msrp": 279,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-g6-dome",
+    "imagePath": "images/ubiquiti-g6-dome.png",
+    "dimensions": "\u00d8144.7 x 96.3 mm",
+    "weight": "820 g",
+    "operatingTemp": "-20\u00b0C to 50\u00b0C (-4\u00b0F to 122\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": false
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal",
+      "Face",
+      "License Plate"
+    ],
+    "localStorage": {
+      "microSdSlot": false,
+      "maxCapacityTb": null
+    }
+  },
+  {
+    "id": "ubiquiti-g6-ptz",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect G6",
+    "model": "G6 PTZ",
+    "type": "ptz",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 109.9,
+      "vertical": 56.7,
+      "diagonal": 134.1
+    },
+    "fovZoomed": {
+      "horizontal": 26.6,
+      "vertical": 15.1,
+      "diagonal": 30.4
+    },
+    "irRange": {
+      "meters": 30,
+      "feet": 98
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "hybrid",
+      "optical": 10
+    },
+    "mounting": [
+      "ceiling",
+      "wall",
+      "pole"
+    ],
+    "ipRating": "IP66",
+    "ikRating": "IK04",
+    "poe": true,
+    "maxPower": 35,
+    "msrp": 399,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-g6-ptz",
+    "imagePath": "images/ubiquiti-g6-ptz.png",
+    "dimensions": "\u00d8107.2 x 104.5 x 203.2 mm",
+    "weight": "1 kg",
+    "operatingTemp": "-30\u00b0C to 50\u00b0C (-22\u00b0F to 122\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal",
+      "Face",
+      "License Plate"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": null
+    }
+  },
+  {
+    "id": "ubiquiti-ai-pro",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect AI",
+    "model": "AI Pro",
+    "type": "dome",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 109.9,
+      "vertical": 59.9,
+      "diagonal": 127.7
+    },
+    "fovZoomed": {
+      "horizontal": 34.9,
+      "vertical": 19.7,
+      "diagonal": 40
+    },
+    "irRange": {
+      "meters": 25,
+      "feet": 82
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "optical",
+      "optical": 3
+    },
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ipRating": "IP65",
+    "ikRating": "IK04",
+    "poe": true,
+    "maxPower": 25,
+    "msrp": 499,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-ai-pro",
+    "imagePath": "images/ubiquiti-ai-pro.png",
+    "dimensions": "\u00d886 x 112.6 mm",
+    "weight": "675 g",
+    "operatingTemp": "-20\u00b0C to 40\u00b0C (-4\u00b0F to 104\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": false,
+      "maxCapacityTb": null
+    }
+  },
+  {
+    "id": "ubiquiti-ai-360",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect AI",
+    "model": "AI 360",
+    "type": "fisheye",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 360,
+      "vertical": 180,
+      "diagonal": 360
+    },
+    "irRange": {
+      "meters": 9,
+      "feet": 30
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "ceiling"
+    ],
+    "ipRating": "IPX4",
+    "ikRating": "IK08",
+    "poe": true,
+    "maxPower": 8.64,
+    "msrp": 399,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-ai-360",
+    "imagePath": "images/ubiquiti-ai-360.png",
+    "dimensions": "\u00d8147 x 49 mm",
+    "weight": "655 g",
+    "operatingTemp": "-20\u00b0C to 40\u00b0C (-4\u00b0F to 104\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": false,
+      "maxCapacityTb": null
+    }
+  },
+  {
+    "id": "ubiquiti-ai-bullet",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect AI",
+    "model": "AI Bullet",
+    "type": "bullet",
+    "resolution": "2K (4MP)",
+    "fov": {
+      "horizontal": 84.7,
+      "vertical": 46.2,
+      "diagonal": 99
+    },
+    "irRange": {
+      "meters": 25,
+      "feet": 82
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "wall",
+      "ceiling",
+      "pole"
+    ],
+    "ipRating": "IP65",
+    "ikRating": "IK04",
+    "poe": true,
+    "maxPower": 7.68,
+    "msrp": 299,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-ai-bullet",
+    "imagePath": "images/ubiquiti-ai-bullet.jpg",
+    "dimensions": "\u00d882 x 88.3 mm",
+    "weight": "628 g",
+    "operatingTemp": "-20\u00b0C to 40\u00b0C (-4\u00b0F to 104\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": false
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal",
+      "Face",
+      "License Plate"
+    ],
+    "localStorage": {
+      "microSdSlot": false,
+      "maxCapacityTb": null
+    }
+  },
+  {
+    "id": "ubiquiti-ai-ptz-precision",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect AI",
+    "model": "AI PTZ Precision",
+    "type": "ptz",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 59,
+      "vertical": 34.1,
+      "diagonal": 67.1
+    },
+    "fovZoomed": {
+      "horizontal": 1.98,
+      "vertical": 1.12,
+      "diagonal": 2.27
+    },
+    "irRange": {
+      "meters": 100,
+      "feet": 328
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "optical",
+      "optical": 31
+    },
+    "mounting": [
+      "wall",
+      "pole",
+      "ceiling"
+    ],
+    "ipRating": "IP66",
+    "ikRating": "IK10",
+    "poe": true,
+    "maxPower": 60,
+    "msrp": 1999,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-ai-ptz-precision",
+    "imagePath": "images/ubiquiti-ai-ptz-precision.png",
+    "dimensions": "\u00d8241 x 349 mm",
+    "weight": "5.5 kg",
+    "operatingTemp": "-40\u00b0C to 50\u00b0C (-40\u00b0F to 122\u00b0F)",
+    "audio": {
+      "microphone": false,
+      "speaker": false
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal",
+      "Face",
+      "License Plate"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": null
+    }
+  },
+  {
+    "id": "ubiquiti-g5-turret-ultra",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect G5",
+    "model": "G5 Turret Ultra",
+    "type": "turret",
+    "resolution": "2K (4MP)",
+    "fov": {
+      "horizontal": 102.4,
+      "vertical": 54.9,
+      "diagonal": 120.6
+    },
+    "irRange": {
+      "meters": 30,
+      "feet": 98
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "wall",
+      "ceiling"
+    ],
+    "ipRating": "IP66",
+    "ikRating": "IK04",
+    "poe": true,
+    "maxPower": 4,
+    "msrp": 129,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-g5-turret-ultra",
+    "imagePath": "images/ubiquiti-g5-turret-ultra.png",
+    "dimensions": "\u00d890 x 71.2 mm",
+    "weight": "330 g",
+    "operatingTemp": "-30\u00b0C to 50\u00b0C (-22\u00b0F to 122\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": false
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": false,
+      "maxCapacityTb": null
+    }
+  },
+  {
+    "id": "ubiquiti-g6-pro-bullet",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect G6",
+    "model": "G6 Pro Bullet",
+    "type": "bullet",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 113.8,
+      "vertical": 61.9,
+      "diagonal": 134
+    },
+    "fovZoomed": {
+      "horizontal": 45.5,
+      "vertical": 25.8,
+      "diagonal": 52
+    },
+    "irRange": {
+      "meters": 40,
+      "feet": 131
+    },
+    "nightVision": "Adaptive IR",
+    "zoom": {
+      "type": "optical",
+      "optical": 2.36
+    },
+    "mounting": [
+      "wall",
+      "ceiling",
+      "pole"
+    ],
+    "ipRating": "IP66",
+    "ikRating": "IK04",
+    "poe": true,
+    "maxPower": 15,
+    "msrp": 479,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-g6-pro-bullet",
+    "imagePath": "images/ubiquiti-g6-pro-bullet.png",
+    "dimensions": "\u00d885.8 x 106.2 mm (without mount)",
+    "weight": "755 g",
+    "operatingTemp": "-20\u00b0C to 50\u00b0C (-4\u00b0F to 122\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal",
+      "Face",
+      "License Plate"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": null
+    }
+  },
+  {
+    "id": "ubiquiti-g6-pro-dome",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect G6",
+    "model": "G6 Pro Dome",
+    "type": "dome",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 113.8,
+      "vertical": 61.9,
+      "diagonal": 134
+    },
+    "fovZoomed": {
+      "horizontal": 45.5,
+      "vertical": 25.8,
+      "diagonal": 52
+    },
+    "irRange": {
+      "meters": 40,
+      "feet": 131
+    },
+    "nightVision": "Adaptive IR",
+    "zoom": {
+      "type": "optical",
+      "optical": 2.36
+    },
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ipRating": "IP66",
+    "ikRating": "IK10",
+    "poe": true,
+    "maxPower": 15,
+    "msrp": 499,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-g6-pro-dome",
+    "imagePath": "images/ubiquiti-g6-pro-dome.png",
+    "dimensions": "\u00d8163.8 x 108.8 mm",
+    "weight": "1.2 kg",
+    "operatingTemp": "-20\u00b0C to 50\u00b0C (-4\u00b0F to 122\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": false
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal",
+      "Face",
+      "License Plate"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": null
+    }
+  },
+  {
+    "id": "ubiquiti-g6-mini-dome",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect G6",
+    "model": "G6 Mini Dome",
+    "type": "dome",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 109.9,
+      "vertical": 56.7,
+      "diagonal": 134.1
+    },
+    "irRange": {
+      "meters": 20,
+      "feet": 65
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ipRating": null,
+    "ikRating": "IK08",
+    "poe": true,
+    "maxPower": 9,
+    "msrp": 299,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-g6-mini-dome",
+    "imagePath": "images/ubiquiti-g6-mini-dome.png",
+    "dimensions": "\u00d8100.8 x 56 mm",
+    "weight": "254 g",
+    "operatingTemp": "-20\u00b0C to 40\u00b0C (-4\u00b0F to 104\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal",
+      "Face",
+      "License Plate"
+    ],
+    "localStorage": {
+      "microSdSlot": false,
+      "maxCapacityTb": null
+    }
+  },
+  {
+    "id": "ubiquiti-g6-turret",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect G6",
+    "model": "G6 Turret",
+    "type": "turret",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 109.9,
+      "vertical": 56.7,
+      "diagonal": 134.1
+    },
+    "irRange": {
+      "meters": 30,
+      "feet": 98
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ipRating": "IP66",
+    "ikRating": "IK04",
+    "poe": true,
+    "maxPower": 12.5,
+    "msrp": 199,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-g6-turret",
+    "imagePath": "images/ubiquiti-g6-turret.png",
+    "dimensions": "\u00d8100 x 95 mm",
+    "weight": "550 g",
+    "operatingTemp": "-30\u00b0C to 50\u00b0C (-22\u00b0F to 122\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": false
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal",
+      "Face",
+      "License Plate"
+    ],
+    "localStorage": {
+      "microSdSlot": false,
+      "maxCapacityTb": null
+    }
+  },
+  {
+    "id": "ubiquiti-ai-ptz",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect AI",
+    "model": "AI PTZ",
+    "type": "ptz",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 59.8,
+      "vertical": 44.4,
+      "diagonal": 70
+    },
+    "fovZoomed": {
+      "horizontal": 3,
+      "vertical": 2.24,
+      "diagonal": 3.76
+    },
+    "irRange": {
+      "meters": 100,
+      "feet": 328
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "optical",
+      "optical": 22
+    },
+    "mounting": [
+      "wall",
+      "pole",
+      "desk"
+    ],
+    "ipRating": "IP66",
+    "ikRating": null,
+    "poe": true,
+    "maxPower": 51,
+    "msrp": 1299,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-ai-ptz",
+    "imagePath": "images/ubiquiti-ai-ptz.png",
+    "dimensions": "207 x 223.7 x 341.3 mm",
+    "weight": "3.8 kg",
+    "operatingTemp": "-40\u00b0C to 50\u00b0C (-40\u00b0F to 122\u00b0F)",
+    "audio": {
+      "microphone": false,
+      "speaker": false
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal",
+      "Face",
+      "License Plate"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": null
+    }
+  },
+  {
+    "id": "ubiquiti-ai-ms-2",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect AI",
+    "model": "AI Multi Sensor 2",
+    "type": "dual-lens",
+    "resolution": "16MP (Dual 8MP)",
+    "fov": {
+      "horizontal": 108.8,
+      "vertical": 57.6,
+      "diagonal": 130.8
+    },
+    "fovZoomed": {
+      "horizontal": 42.8,
+      "vertical": 24.1,
+      "diagonal": 49.1
+    },
+    "irRange": {
+      "meters": 20,
+      "feet": 65
+    },
+    "nightVision": "Adaptive IR",
+    "zoom": {
+      "type": "optical",
+      "optical": 2.33
+    },
+    "mounting": [
+      "ceiling",
+      "wall",
+      "pole"
+    ],
+    "ipRating": "IP66",
+    "ikRating": "IK10",
+    "poe": true,
+    "maxPower": 25,
+    "msrp": 699,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-ai-ms-2",
+    "imagePath": "images/ubiquiti-ai-ms-2.png",
+    "dimensions": "218 x 132 x 93.5 mm",
+    "weight": "1.3 kg",
+    "operatingTemp": "-20\u00b0C to 50\u00b0C (-4\u00b0F to 122\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": false
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal",
+      "Face",
+      "License Plate"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": null
+    }
+  },
+  {
+    "id": "ubiquiti-ai-ms-4",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect AI",
+    "model": "AI Multi Sensor 4",
+    "type": "dual-lens",
+    "resolution": "32MP (Quad 8MP)",
+    "fov": {
+      "horizontal": 108.8,
+      "vertical": 57.6,
+      "diagonal": 130.8
+    },
+    "fovZoomed": {
+      "horizontal": 42.8,
+      "vertical": 24.1,
+      "diagonal": 49.1
+    },
+    "irRange": {
+      "meters": 20,
+      "feet": 65
+    },
+    "nightVision": "360\u00b0 Adaptive IR",
+    "zoom": {
+      "type": "optical",
+      "optical": 2.33
+    },
+    "mounting": [
+      "ceiling"
+    ],
+    "ipRating": "IP66",
+    "ikRating": "IK10",
+    "poe": true,
+    "maxPower": 34.6,
+    "msrp": 1799,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-ai-ms-4",
+    "imagePath": "images/ubiquiti-ai-ms-4.png",
+    "dimensions": "\u00d8255 x 105 mm",
+    "weight": "2.4 kg",
+    "operatingTemp": "-20\u00b0C to 50\u00b0C (-4\u00b0F to 122\u00b0F)",
+    "audio": {
+      "microphone": false,
+      "speaker": false
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal",
+      "Face",
+      "License Plate"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": null
+    }
+  },
+  {
+    "id": "ubiquiti-ai-lpr",
+    "manufacturer": "Ubiquiti",
+    "series": "UniFi Protect AI",
+    "model": "AI LPR",
+    "type": "bullet",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 109.9,
+      "vertical": 60,
+      "diagonal": 127.7
+    },
+    "fovZoomed": {
+      "horizontal": 35,
+      "vertical": 19.8,
+      "diagonal": 40
+    },
+    "irRange": {
+      "meters": 15,
+      "feet": 50
+    },
+    "nightVision": "LPR Optimization Filter",
+    "zoom": {
+      "type": "optical",
+      "optical": 3
+    },
+    "mounting": [
+      "wall",
+      "ceiling",
+      "pole"
+    ],
+    "ipRating": "IP66",
+    "ikRating": "IK04",
+    "poe": true,
+    "maxPower": 25.5,
+    "msrp": 499,
+    "productUrl": "https://store.ui.com/us/en/products/uvc-ai-lpr",
+    "imagePath": "images/ubiquiti-ai-lpr.png",
+    "dimensions": "130 x 151.4 x 302.9 mm",
+    "weight": "1.5 kg",
+    "operatingTemp": "-20\u00b0C to 50\u00b0C (-4\u00b0F to 122\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": false
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal",
+      "License Plate"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": null
+    }
+  }
+]

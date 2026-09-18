@@ -1,0 +1,197 @@
+[
+  {
+    "id": "ubiquiti-unvr",
+    "manufacturer": "Ubiquiti",
+    "model": "UNVR",
+    "category": "nvr",
+    "maxChannels": 50,
+    "driveBays": 4,
+    "builtInPoe": false,
+    "ports": {
+      "rj45": 1,
+      "sfp": 1
+    },
+    "msrp": 299,
+    "productUrl": "https://store.ui.com/us/en/products/unvr",
+    "imagePath": "images/ubiquiti-unvr.png",
+    "dimensions": "442.4 x 325 x 43.7 mm",
+    "weight": "5.11 kg",
+    "operatingTemp": "-5\u00b0C to 40\u00b0C (23\u00b0F to 104\u00b0F)",
+    "maxDriveCapacityTb": 16,
+    "raidSupport": true
+  },
+  {
+    "id": "ubiquiti-unvr-pro",
+    "manufacturer": "Ubiquiti",
+    "model": "UNVR Pro",
+    "category": "nvr",
+    "maxChannels": 60,
+    "driveBays": 7,
+    "builtInPoe": false,
+    "ports": {
+      "rj45": 1,
+      "sfp": 1
+    },
+    "msrp": 499,
+    "productUrl": "https://store.ui.com/us/en/products/unvr-pro",
+    "imagePath": "images/ubiquiti-unvr-pro.png",
+    "dimensions": "442 x 325 x 87 mm",
+    "weight": "9.2 kg",
+    "operatingTemp": "-5\u00b0C to 40\u00b0C (23\u00b0F to 104\u00b0F)",
+    "maxDriveCapacityTb": 16,
+    "raidSupport": true
+  },
+  {
+    "id": "ubiquiti-unvr-instant",
+    "manufacturer": "Ubiquiti",
+    "model": "UNVR Instant",
+    "category": "nvr",
+    "maxChannels": 10,
+    "driveBays": 1,
+    "builtInPoe": true,
+    "poePorts": 6,
+    "poeBudget": 40,
+    "ports": {
+      "rj45": 1,
+      "sfp": 0
+    },
+    "msrp": 199,
+    "productUrl": "https://store.ui.com/us/en/products/unvr-instant",
+    "imagePath": "images/ubiquiti-unvr-instant.png",
+    "dimensions": "220 x 220 x 47 mm",
+    "weight": "1.04 kg",
+    "operatingTemp": "0\u00b0C to 40\u00b0C (32\u00b0F to 104\u00b0F)",
+    "maxDriveCapacityTb": null,
+    "raidSupport": false
+  },
+  {
+    "id": "reolink-rln8-410",
+    "manufacturer": "Reolink",
+    "model": "RLN8-410",
+    "category": "nvr",
+    "maxChannels": 12,
+    "driveBays": 1,
+    "builtInPoe": true,
+    "poePorts": 8,
+    "poeBudget": 200,
+    "ports": {
+      "rj45": 1,
+      "sfp": 0
+    },
+    "msrp": 349.99,
+    "productUrl": "https://reolink.com/product/rln8-410/",
+    "imagePath": "images/reolink-rln8-410.jpg",
+    "dimensions": "260 x 41 x 230 mm",
+    "weight": "1.4 kg",
+    "operatingTemp": "-10\u00b0C to 45\u00b0C (14\u00b0F to 113\u00b0F)",
+    "maxDriveCapacityTb": 6,
+    "raidSupport": false
+  },
+  {
+    "id": "reolink-rln16-410",
+    "manufacturer": "Reolink",
+    "model": "RLN16-410",
+    "category": "nvr",
+    "maxChannels": 24,
+    "driveBays": 2,
+    "builtInPoe": true,
+    "poePorts": 16,
+    "poeBudget": 400,
+    "ports": {
+      "rj45": 1,
+      "sfp": 0
+    },
+    "msrp": 459.99,
+    "productUrl": "https://reolink.com/product/rln16-410/",
+    "imagePath": "images/reolink-rln16-410.jpg",
+    "dimensions": "330 x 45 x 260 mm",
+    "weight": "3.0 kg",
+    "operatingTemp": "-10\u00b0C to 55\u00b0C (14\u00b0F to 131\u00b0F)",
+    "maxDriveCapacityTb": 4,
+    "raidSupport": false
+  },
+  {
+    "id": "reolink-rln36",
+    "manufacturer": "Reolink",
+    "model": "RLN36",
+    "category": "nvr",
+    "maxChannels": 36,
+    "driveBays": 3,
+    "builtInPoe": false,
+    "ports": {
+      "rj45": 1,
+      "sfp": 0
+    },
+    "msrp": 259.99,
+    "productUrl": "https://reolink.com/product/rln36/",
+    "imagePath": "images/reolink-rln36.png",
+    "dimensions": "330 x 48 x 310 mm",
+    "weight": "2.26 kg",
+    "operatingTemp": "-10\u00b0C to 45\u00b0C (14\u00b0F to 113\u00b0F)",
+    "maxDriveCapacityTb": 16,
+    "raidSupport": false
+  },
+  {
+    "id": "ubiquiti-unvr-g2",
+    "manufacturer": "Ubiquiti",
+    "model": "UNVR G2",
+    "category": "nvr",
+    "maxChannels": 60,
+    "driveBays": 4,
+    "builtInPoe": false,
+    "ports": {
+      "rj45": 1,
+      "sfp": 1
+    },
+    "msrp": 699,
+    "productUrl": "https://store.ui.com/us/en/products/unvr-g2",
+    "imagePath": "images/ubiquiti-unvr-g2.png",
+    "dimensions": "442.4 x 43.7 x 325 mm",
+    "weight": "6 kg",
+    "operatingTemp": "0\u00b0C to 40\u00b0C (32\u00b0F to 104\u00b0F)",
+    "maxDriveCapacityTb": null,
+    "raidSupport": true
+  },
+  {
+    "id": "ubiquiti-unvr-g2-pro",
+    "manufacturer": "Ubiquiti",
+    "model": "UNVR G2 Pro",
+    "category": "nvr",
+    "maxChannels": 100,
+    "driveBays": 8,
+    "builtInPoe": false,
+    "ports": {
+      "rj45": 1,
+      "sfp": 1
+    },
+    "msrp": 999,
+    "productUrl": "https://store.ui.com/us/en/products/unvr-g2-pro",
+    "imagePath": "images/ubiquiti-unvr-g2-pro.png",
+    "dimensions": "442.4 x 87.4 x 325 mm",
+    "weight": "8.4 kg",
+    "operatingTemp": "0\u00b0C to 40\u00b0C (32\u00b0F to 104\u00b0F)",
+    "maxDriveCapacityTb": null,
+    "raidSupport": true
+  },
+  {
+    "id": "ubiquiti-envr",
+    "manufacturer": "Ubiquiti",
+    "model": "Enterprise NVR (ENVR)",
+    "category": "nvr",
+    "maxChannels": 210,
+    "driveBays": 16,
+    "builtInPoe": false,
+    "ports": {
+      "rj45": 1,
+      "sfp": 2
+    },
+    "msrp": 1999,
+    "productUrl": "https://store.ui.com/us/en/products/envr",
+    "imagePath": "images/ubiquiti-envr.png",
+    "dimensions": "481.4 x 480 x 132 mm",
+    "weight": "16.6 kg",
+    "operatingTemp": "-5\u00b0C to 40\u00b0C (23\u00b0F to 104\u00b0F)",
+    "maxDriveCapacityTb": null,
+    "raidSupport": true
+  }
+]

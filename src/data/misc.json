@@ -1,0 +1,86 @@
+[
+  {
+    "id": "generic-misc-tv",
+    "manufacturer": "Generic",
+    "model": "TV",
+    "category": "misc",
+    "applianceType": "Television",
+    "ports": 1,
+    "msrp": 0
+  },
+  {
+    "id": "generic-misc-toaster",
+    "manufacturer": "Generic",
+    "model": "Toaster",
+    "category": "misc",
+    "applianceType": "Smart Kitchen Appliance",
+    "ports": 1,
+    "msrp": 0
+  },
+  {
+    "id": "generic-misc-smart-speaker",
+    "manufacturer": "Generic",
+    "model": "Smart Speaker",
+    "category": "misc",
+    "applianceType": "Smart Speaker",
+    "ports": 1,
+    "msrp": 0
+  },
+  {
+    "id": "generic-misc-streaming-player",
+    "manufacturer": "Generic",
+    "model": "Streaming Media Player",
+    "category": "misc",
+    "applianceType": "Streaming Media Player",
+    "ports": 1,
+    "msrp": 0
+  },
+  {
+    "id": "generic-misc-game-console",
+    "manufacturer": "Generic",
+    "model": "Game Console",
+    "category": "misc",
+    "applianceType": "Game Console",
+    "ports": 1,
+    "msrp": 0
+  },
+  {
+    "id": "generic-misc-thermostat",
+    "manufacturer": "Generic",
+    "model": "Smart Thermostat",
+    "category": "misc",
+    "applianceType": "Smart Thermostat",
+    "ports": 1,
+    "msrp": 0
+  },
+  {
+    "id": "generic-misc-refrigerator",
+    "manufacturer": "Generic",
+    "model": "Smart Refrigerator",
+    "category": "misc",
+    "applianceType": "Smart Kitchen Appliance",
+    "ports": 1,
+    "msrp": 0
+  },
+  {
+    "id": "generic-misc-robot-vacuum",
+    "manufacturer": "Generic",
+    "model": "Robot Vacuum",
+    "category": "misc",
+    "applianceType": "Robot Vacuum",
+    "ports": 1,
+    "msrp": 0
+  },
+  {
+    "id": "generic-misc-death-laser",
+    "manufacturer": "Ominous Industries",
+    "model": "Super Mega Death Laser",
+    "category": "misc",
+    "applianceType": "Orbital Denial Platform",
+    "ports": 1,
+    "msrp": 4999999,
+    "maxPower": 1000,
+    "poeInput": "802.3at (PoE+)",
+    "notes": "Draws 1000 W over PoE+. This is not a thing that can happen."
+  }
+]

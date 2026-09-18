@@ -1,0 +1,23 @@
+Copyright (c) 2026 Andrew Wycoff. All rights reserved.
+
+This software and its source code are made available for viewing only.
+
+You may not use, copy, modify, merge, publish, distribute, sublicense, sell,
+or create derivative works from any part of this repository without the prior
+written permission of the copyright holder.
+
+Viewing the source, and forking this repository through GitHub's own interface
+for the purpose of proposing a contribution back to it, are permitted. No other
+rights are granted, expressly or by implication.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Lense is a design aid, not an engineering authority. Cable lengths, power
+budgets and costs it reports are estimates from the model you drew. Verify
+against the manufacturer's specifications and applicable code before you buy
+or install anything.

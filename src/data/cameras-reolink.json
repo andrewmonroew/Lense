@@ -1,0 +1,967 @@
+[
+  {
+    "id": "reolink-rlc-810a",
+    "manufacturer": "Reolink",
+    "series": "RLC PoE",
+    "model": "RLC-810A",
+    "type": "bullet",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 87,
+      "vertical": 44,
+      "diagonal": 105
+    },
+    "irRange": {
+      "meters": 30,
+      "feet": 100
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "wall",
+      "ceiling"
+    ],
+    "ipRating": "IP66",
+    "ikRating": null,
+    "poe": true,
+    "maxPower": 12,
+    "msrp": 99.99,
+    "productUrl": "https://reolink.com/product/rlc-810a/",
+    "imagePath": "images/reolink-rlc-810a.jpg",
+    "dimensions": "60 x 66 x 192 mm",
+    "weight": "488 g",
+    "operatingTemp": "-10\u00b0C to 55\u00b0C (14\u00b0F to 131\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": false
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": 0.5
+    }
+  },
+  {
+    "id": "reolink-rlc-820a",
+    "manufacturer": "Reolink",
+    "series": "RLC PoE",
+    "model": "RLC-820A",
+    "type": "dome",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 87,
+      "vertical": 44,
+      "diagonal": 105
+    },
+    "irRange": {
+      "meters": 30,
+      "feet": 100
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ipRating": "IP67",
+    "ikRating": "IK10",
+    "poe": true,
+    "maxPower": 12,
+    "msrp": 99.99,
+    "productUrl": "https://reolink.com/product/rlc-820a/",
+    "imagePath": "images/reolink-rlc-820a.jpg",
+    "dimensions": "\u00d8105 x 95 mm",
+    "weight": "467.5 g",
+    "operatingTemp": "-10\u00b0C to 55\u00b0C (14\u00b0F to 131\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": false
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": 0.5
+    }
+  },
+  {
+    "id": "reolink-rlc-842a",
+    "manufacturer": "Reolink",
+    "series": "RLC PoE",
+    "model": "RLC-842A",
+    "type": "dome",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 96,
+      "vertical": 69,
+      "diagonal": 108
+    },
+    "fovZoomed": {
+      "horizontal": 27,
+      "vertical": 21,
+      "diagonal": 32
+    },
+    "irRange": {
+      "meters": 30,
+      "feet": 100
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "optical",
+      "optical": 5
+    },
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ipRating": "IP66",
+    "ikRating": "IK10",
+    "poe": true,
+    "maxPower": 18,
+    "msrp": 110,
+    "productUrl": "https://reolink.com/product/rlc-842a/",
+    "imagePath": "images/reolink-rlc-842a.jpg",
+    "dimensions": "\u00d8133 x 100.25 mm",
+    "weight": "686 g",
+    "operatingTemp": "-10\u00b0C to 55\u00b0C (14\u00b0F to 131\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": false
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": 0.25
+    }
+  },
+  {
+    "id": "reolink-rlc-823a",
+    "manufacturer": "Reolink",
+    "series": "RLC PoE",
+    "model": "RLC-823A",
+    "type": "ptz",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 105,
+      "vertical": 55,
+      "diagonal": 118
+    },
+    "fovZoomed": {
+      "horizontal": 31,
+      "vertical": 17,
+      "diagonal": 37
+    },
+    "irRange": {
+      "meters": 60,
+      "feet": 190
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "optical",
+      "optical": 5
+    },
+    "mounting": [
+      "ceiling",
+      "wall",
+      "pole"
+    ],
+    "ipRating": "IP66",
+    "ikRating": null,
+    "poe": true,
+    "maxPower": 24,
+    "msrp": 160,
+    "productUrl": "https://reolink.com/product/rlc-823a/",
+    "imagePath": "images/reolink-rlc-823a.jpg",
+    "dimensions": "\u00d8136 x 201 mm",
+    "weight": "1.8 kg",
+    "operatingTemp": "-10\u00b0C to 55\u00b0C (14\u00b0F to 131\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": 0.25
+    }
+  },
+  {
+    "id": "reolink-rlc-1212a",
+    "manufacturer": "Reolink",
+    "series": "RLC PoE",
+    "model": "RLC-1212A",
+    "type": "dome",
+    "resolution": "12MP",
+    "fov": {
+      "horizontal": 93,
+      "vertical": 49,
+      "diagonal": 110
+    },
+    "irRange": {
+      "meters": 30,
+      "feet": 100
+    },
+    "nightVision": "IR + Spotlight",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ipRating": "IP67",
+    "ikRating": "IK10",
+    "poe": true,
+    "maxPower": 12,
+    "msrp": 129.99,
+    "productUrl": "https://reolink.com/product/rlc-1212a/",
+    "imagePath": "images/reolink-rlc-1212a.jpg",
+    "dimensions": "\u00d867 x 187 mm",
+    "weight": "480 g",
+    "operatingTemp": "-10\u00b0C to 55\u00b0C (14\u00b0F to 131\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": 0.25
+    }
+  },
+  {
+    "id": "reolink-rlc-1224a",
+    "manufacturer": "Reolink",
+    "series": "RLC PoE",
+    "model": "RLC-1224A",
+    "type": "bullet",
+    "resolution": "12MP",
+    "fov": {
+      "horizontal": 93,
+      "vertical": 49,
+      "diagonal": 110
+    },
+    "irRange": {
+      "meters": 30,
+      "feet": 100
+    },
+    "nightVision": "IR + Spotlight",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "wall",
+      "ceiling"
+    ],
+    "ipRating": "IP66",
+    "ikRating": null,
+    "poe": true,
+    "maxPower": 12,
+    "msrp": 129.99,
+    "productUrl": "https://reolink.com/product/rlc-1224a/",
+    "imagePath": "images/reolink-rlc-1224a.jpg",
+    "dimensions": "\u00d8117.4 x 103.8 mm",
+    "weight": "515 g",
+    "operatingTemp": "-10\u00b0C to 55\u00b0C (14\u00b0F to 131\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": 0.25
+    }
+  },
+  {
+    "id": "reolink-duo3-poe",
+    "manufacturer": "Reolink",
+    "series": "Duo PoE",
+    "model": "Duo 3 PoE",
+    "type": "dual-lens",
+    "resolution": "16MP (Dual 8MP)",
+    "fov": {
+      "horizontal": 180,
+      "vertical": 55,
+      "diagonal": 180
+    },
+    "irRange": {
+      "meters": 30,
+      "feet": 100
+    },
+    "nightVision": "IR + Spotlight",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "wall",
+      "ceiling"
+    ],
+    "ipRating": "IP67",
+    "ikRating": null,
+    "poe": true,
+    "maxPower": 12,
+    "msrp": 209.99,
+    "productUrl": "https://reolink.com/product/reolink-duo-3-poe/",
+    "imagePath": "images/reolink-duo3-poe.jpg",
+    "dimensions": "195 x 103 x 56 mm",
+    "weight": "680 g",
+    "operatingTemp": "-10\u00b0C to 55\u00b0C (14\u00b0F to 131\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": 0.5
+    }
+  },
+  {
+    "id": "reolink-trackmix-poe",
+    "manufacturer": "Reolink",
+    "series": "TrackMix",
+    "model": "TrackMix PoE",
+    "type": "ptz",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 104,
+      "vertical": 60,
+      "diagonal": 120
+    },
+    "irRange": {
+      "meters": 30,
+      "feet": 100
+    },
+    "nightVision": "IR + Spotlight",
+    "zoom": {
+      "type": "hybrid",
+      "optical": 6
+    },
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ipRating": "IP65",
+    "ikRating": null,
+    "poe": true,
+    "maxPower": 12,
+    "msrp": 199.99,
+    "productUrl": "https://reolink.com/product/reolink-trackmix-poe/",
+    "imagePath": "images/reolink-trackmix-poe.jpg",
+    "dimensions": "228 x 147 x 110 mm",
+    "weight": "1.21 kg",
+    "operatingTemp": "-10\u00b0C to 55\u00b0C (14\u00b0F to 131\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": 0.25
+    }
+  },
+  {
+    "id": "reolink-cx810",
+    "manufacturer": "Reolink",
+    "series": "CX ColorX",
+    "model": "CX810",
+    "type": "bullet",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 93.2,
+      "vertical": 48.2,
+      "diagonal": 111.6
+    },
+    "irRange": {
+      "meters": null,
+      "feet": null
+    },
+    "nightVision": "ColorX (True Color)",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "wall",
+      "ceiling"
+    ],
+    "ipRating": "IP67",
+    "ikRating": null,
+    "poe": true,
+    "maxPower": 12,
+    "msrp": 129.99,
+    "productUrl": "https://reolink.com/product/cx810/",
+    "imagePath": "images/reolink-cx810.jpg",
+    "dimensions": "67 x 187 mm",
+    "weight": "467 g",
+    "operatingTemp": "-10\u00b0C to 50\u00b0C (14\u00b0F to 126\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": 0.25
+    }
+  },
+  {
+    "id": "reolink-e1-zoom",
+    "manufacturer": "Reolink",
+    "series": "E1",
+    "model": "E1 Zoom",
+    "type": "ptz",
+    "resolution": "5MP",
+    "fov": {
+      "horizontal": 98,
+      "vertical": 75,
+      "diagonal": 123
+    },
+    "fovZoomed": {
+      "horizontal": 48,
+      "vertical": 37,
+      "diagonal": 58
+    },
+    "irRange": {
+      "meters": 12,
+      "feet": 40
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "optical",
+      "optical": 3
+    },
+    "mounting": [
+      "ceiling",
+      "desk"
+    ],
+    "ipRating": null,
+    "ikRating": null,
+    "poe": false,
+    "maxPower": 5,
+    "msrp": 109.99,
+    "productUrl": "https://reolink.com/product/e1-zoom/",
+    "imagePath": "images/reolink-e1-zoom.jpg",
+    "dimensions": "\u00d880 x 111 mm",
+    "weight": "250 g",
+    "operatingTemp": "-10\u00b0C to 55\u00b0C (14\u00b0F to 131\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": 0.125
+    }
+  },
+  {
+    "id": "reolink-rlc-843a",
+    "manufacturer": "Reolink",
+    "series": "RLC PoE",
+    "model": "RLC-843A",
+    "type": "dome",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 100,
+      "vertical": 55,
+      "diagonal": 114
+    },
+    "fovZoomed": {
+      "horizontal": 31,
+      "vertical": 17,
+      "diagonal": 35
+    },
+    "irRange": {
+      "meters": 30,
+      "feet": 100
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "optical",
+      "optical": 5
+    },
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ipRating": "IP67",
+    "ikRating": "IK10",
+    "poe": true,
+    "maxPower": 12,
+    "msrp": 149.99,
+    "productUrl": "https://reolink.com/product/rlc-843a/",
+    "imagePath": "images/reolink-rlc-843a.jpg",
+    "dimensions": "\u00d8132.7 x 98.3 mm",
+    "weight": "751 g",
+    "operatingTemp": "-10\u00b0C to 55\u00b0C (14\u00b0F to 131\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": 0.5
+    }
+  },
+  {
+    "id": "reolink-rlc-840a",
+    "manufacturer": "Reolink",
+    "series": "RLC PoE",
+    "model": "RLC-840A",
+    "type": "dome",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 105,
+      "vertical": 56,
+      "diagonal": 125
+    },
+    "irRange": {
+      "meters": 30,
+      "feet": 100
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ipRating": "IP67",
+    "ikRating": "IK10",
+    "poe": true,
+    "maxPower": 12,
+    "msrp": 101.99,
+    "productUrl": "https://reolink.com/us/product/rlc-840a/",
+    "imagePath": "images/reolink-rlc-840a.png",
+    "dimensions": "\u00d8117 x 86 mm",
+    "weight": "604 g",
+    "operatingTemp": "-10\u00b0C to 55\u00b0C (14\u00b0F to 131\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": 0.5
+    }
+  },
+  {
+    "id": "reolink-duo3v-poe",
+    "manufacturer": "Reolink",
+    "series": "Duo PoE",
+    "model": "Duo 3V PoE",
+    "type": "dual-lens",
+    "resolution": "16MP (Dual 8MP)",
+    "fov": {
+      "horizontal": 180,
+      "vertical": 53,
+      "diagonal": 180
+    },
+    "irRange": {
+      "meters": 30,
+      "feet": 100
+    },
+    "nightVision": "IR + Spotlight",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "wall",
+      "ceiling"
+    ],
+    "ipRating": "IP67",
+    "ikRating": "IK10",
+    "poe": true,
+    "maxPower": 12,
+    "msrp": 209.99,
+    "productUrl": "https://reolink.com/us/product/reolink-duo-3v-poe/",
+    "imagePath": "images/reolink-duo3v-poe.png",
+    "dimensions": "\u00d8137 x 98.5 mm",
+    "weight": "664 g",
+    "operatingTemp": "-15\u00b0C to 45\u00b0C (5\u00b0F to 113\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": 0.5
+    }
+  },
+  {
+    "id": "reolink-duo2-poe",
+    "manufacturer": "Reolink",
+    "series": "Duo PoE",
+    "model": "Duo 2 PoE",
+    "type": "dual-lens",
+    "resolution": "8MP (Dual 4MP)",
+    "fov": {
+      "horizontal": 180,
+      "vertical": 60,
+      "diagonal": 180
+    },
+    "irRange": {
+      "meters": 30,
+      "feet": 100
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "wall",
+      "ceiling"
+    ],
+    "ipRating": "IP67",
+    "ikRating": null,
+    "poe": true,
+    "maxPower": 15,
+    "msrp": 159.99,
+    "productUrl": "https://reolink.com/product/reolink-duo-poe/",
+    "imagePath": "images/reolink-duo2-poe.png",
+    "dimensions": "195 x 103 x 56 mm",
+    "weight": "680 g",
+    "operatingTemp": "-10\u00b0C to 55\u00b0C (14\u00b0F to 131\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": 0.25
+    }
+  },
+  {
+    "id": "reolink-duo2v-poe",
+    "manufacturer": "Reolink",
+    "series": "Duo PoE",
+    "model": "Duo 2V PoE",
+    "type": "dual-lens",
+    "resolution": "8MP (Dual 4MP)",
+    "fov": {
+      "horizontal": 180,
+      "vertical": 60,
+      "diagonal": 180
+    },
+    "irRange": {
+      "meters": 30,
+      "feet": 100
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "wall",
+      "ceiling"
+    ],
+    "ipRating": "IP67",
+    "ikRating": "IK10",
+    "poe": true,
+    "maxPower": 15,
+    "msrp": 159.99,
+    "productUrl": "https://reolink.com/product/reolink-duo-2v-poe/",
+    "imagePath": "images/reolink-duo2v-poe.png",
+    "dimensions": "195 x 103 x 56 mm",
+    "weight": "680 g",
+    "operatingTemp": "-10\u00b0C to 55\u00b0C (14\u00b0F to 131\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": 0.25
+    }
+  },
+  {
+    "id": "reolink-elite-pro-floodlight-poe",
+    "manufacturer": "Reolink",
+    "series": "Elite",
+    "model": "Elite Pro Floodlight PoE",
+    "type": "dual-lens",
+    "resolution": "16MP (Dual 8MP)",
+    "fov": {
+      "horizontal": 180,
+      "vertical": 55,
+      "diagonal": 180
+    },
+    "irRange": {
+      "meters": 30,
+      "feet": 100
+    },
+    "nightVision": "IR + Floodlight (2800 lm, 3000K-6500K adjustable)",
+    "zoom": {
+      "type": "digital",
+      "optical": null
+    },
+    "mounting": [
+      "wall",
+      "ceiling"
+    ],
+    "ipRating": "IP66",
+    "ikRating": null,
+    "poe": true,
+    "maxPower": 25.5,
+    "msrp": 279.99,
+    "productUrl": "https://reolink.com/us/product/elite-pro-floodlight-poe/",
+    "imagePath": "images/reolink-elite-pro-floodlight-poe.png",
+    "dimensions": "174 x 184 x 295 mm",
+    "weight": "1.3 kg",
+    "operatingTemp": "-10\u00b0C to 55\u00b0C (14\u00b0F to 131\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal",
+      "Line Crossing",
+      "Zone Intrusion"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": 0.5
+    }
+  },
+  {
+    "id": "reolink-e1-outdoor-se-poe",
+    "manufacturer": "Reolink",
+    "series": "E1",
+    "model": "E1 Outdoor SE PoE",
+    "type": "ptz",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 88,
+      "vertical": 45,
+      "diagonal": 99
+    },
+    "irRange": {
+      "meters": 12,
+      "feet": 40
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "none",
+      "optical": null
+    },
+    "mounting": [
+      "wall",
+      "ceiling"
+    ],
+    "ipRating": "IP65",
+    "ikRating": null,
+    "poe": true,
+    "maxPower": 12,
+    "msrp": 119.99,
+    "productUrl": "https://reolink.com/product/e1-outdoor-se-poe/",
+    "imagePath": "images/reolink-e1-outdoor-se-poe.png",
+    "dimensions": "\u00d890 x 120 mm",
+    "weight": "446 g",
+    "operatingTemp": "-10\u00b0C to 55\u00b0C (14\u00b0F to 131\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": 0.5
+    }
+  },
+  {
+    "id": "reolink-rlc-823s1",
+    "manufacturer": "Reolink",
+    "series": "RLC PoE",
+    "model": "RLC-823S1",
+    "type": "ptz",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 100,
+      "vertical": 56,
+      "diagonal": 115
+    },
+    "fovZoomed": {
+      "horizontal": 31,
+      "vertical": 17,
+      "diagonal": 36
+    },
+    "irRange": {
+      "meters": 60,
+      "feet": 196
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "optical",
+      "optical": 5
+    },
+    "mounting": [
+      "ceiling",
+      "wall",
+      "pole"
+    ],
+    "ipRating": "IP66",
+    "ikRating": null,
+    "poe": true,
+    "maxPower": 24,
+    "msrp": 289.99,
+    "productUrl": "https://reolink.com/product/rlc-823s1/",
+    "imagePath": "images/reolink-rlc-823s1.png",
+    "dimensions": "373 x 177 x 140 mm",
+    "weight": "2.34 kg",
+    "operatingTemp": "-10\u00b0C to 55\u00b0C (14\u00b0F to 131\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": 0.5
+    }
+  },
+  {
+    "id": "reolink-rlc-823s2",
+    "manufacturer": "Reolink",
+    "series": "RLC PoE",
+    "model": "RLC-823S2",
+    "type": "ptz",
+    "resolution": "4K (8MP)",
+    "fov": {
+      "horizontal": 54.2,
+      "vertical": 30.5,
+      "diagonal": 62
+    },
+    "fovZoomed": {
+      "horizontal": 3.6,
+      "vertical": 2,
+      "diagonal": 4
+    },
+    "irRange": {
+      "meters": 80,
+      "feet": 260
+    },
+    "nightVision": "IR",
+    "zoom": {
+      "type": "optical",
+      "optical": 16
+    },
+    "mounting": [
+      "ceiling",
+      "wall",
+      "pole"
+    ],
+    "ipRating": "IP66",
+    "ikRating": null,
+    "poe": true,
+    "maxPower": 24,
+    "msrp": 379.99,
+    "productUrl": "https://reolink.com/product/rlc-823s2/",
+    "imagePath": "images/reolink-rlc-823s2.png",
+    "dimensions": "373 x 177 x 140 mm",
+    "weight": "2.34 kg",
+    "operatingTemp": "-10\u00b0C to 55\u00b0C (14\u00b0F to 131\u00b0F)",
+    "audio": {
+      "microphone": true,
+      "speaker": true
+    },
+    "smartDetection": [
+      "Person",
+      "Vehicle",
+      "Animal"
+    ],
+    "localStorage": {
+      "microSdSlot": true,
+      "maxCapacityTb": 0.5
+    }
+  }
+]

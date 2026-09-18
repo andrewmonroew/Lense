@@ -1,0 +1,537 @@
+[
+  {
+    "id": "ubiquiti-u7-pro-max",
+    "manufacturer": "Ubiquiti",
+    "model": "U7 Pro Max",
+    "category": "access-point",
+    "ports": 1,
+    "wifiStandard": "Wi-Fi 7 (802.11be)",
+    "maxThroughputMbps": 15088,
+    "radios": {
+      "24ghz": true,
+      "5ghz": true,
+      "6ghz": true
+    },
+    "poeInput": "802.3at (PoE+)",
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ratedClients": 500,
+    "msrp": 279,
+    "productUrl": "https://store.ui.com/us/en/products/u7-pro-max",
+    "imagePath": "images/ubiquiti-u7-pro-max.png",
+    "dimensions": "\u00d8206 x 46 mm (\u00d88.1 x 1.8\")",
+    "weight": "680 g (1.5 lb)",
+    "operatingTemp": "-30\u00b0C to 50\u00b0C (-22\u00b0F to 122\u00b0F)",
+    "maxPower": 25
+  },
+  {
+    "id": "ubiquiti-u7-pro-xgs",
+    "manufacturer": "Ubiquiti",
+    "model": "U7 Pro XGS",
+    "category": "access-point",
+    "ports": 1,
+    "wifiStandard": "Wi-Fi 7 (802.11be)",
+    "maxThroughputMbps": 15088,
+    "radios": {
+      "24ghz": true,
+      "5ghz": true,
+      "6ghz": true
+    },
+    "poeInput": "802.3bt (PoE++)",
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ratedClients": 500,
+    "msrp": 299,
+    "productUrl": "https://store.ui.com/us/en/products/u7-pro-xgs",
+    "imagePath": "images/ubiquiti-u7-pro-xgs.png",
+    "dimensions": "\u00d8215 x 32.5 mm (\u00d88.5 x 1.3\")",
+    "weight": "800 g (1.8 lb)",
+    "operatingTemp": "-30\u00b0C to 40\u00b0C (-22\u00b0F to 104\u00b0F)",
+    "maxPower": 29
+  },
+  {
+    "id": "ubiquiti-u7-pro-xg",
+    "manufacturer": "Ubiquiti",
+    "model": "U7 Pro XG",
+    "category": "access-point",
+    "ports": 1,
+    "wifiStandard": "Wi-Fi 7 (802.11be)",
+    "maxThroughputMbps": 10788,
+    "radios": {
+      "24ghz": true,
+      "5ghz": true,
+      "6ghz": true
+    },
+    "poeInput": "802.3at (PoE+)",
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ratedClients": 300,
+    "msrp": 199,
+    "productUrl": "https://store.ui.com/us/en/products/u7-pro-xg",
+    "imagePath": "images/ubiquiti-u7-pro-xg.png",
+    "dimensions": "\u00d8206 x 32.5 mm (\u00d88.1 x 1.3\")",
+    "weight": "750 g (1.7 lb)",
+    "operatingTemp": "-30\u00b0C to 40\u00b0C (-22\u00b0F to 104\u00b0F)",
+    "maxPower": 22
+  },
+  {
+    "id": "ubiquiti-u7-pro",
+    "manufacturer": "Ubiquiti",
+    "model": "U7 Pro",
+    "category": "access-point",
+    "ports": 1,
+    "wifiStandard": "Wi-Fi 7 (802.11be)",
+    "maxThroughputMbps": 10788,
+    "radios": {
+      "24ghz": true,
+      "5ghz": true,
+      "6ghz": true
+    },
+    "poeInput": "802.3at (PoE+)",
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ratedClients": 300,
+    "msrp": 189,
+    "productUrl": "https://store.ui.com/us/en/products/u7-pro",
+    "imagePath": "images/ubiquiti-u7-pro.png",
+    "dimensions": "\u00d8206 x 46 mm (\u00d88.1 x 1.8\")",
+    "weight": "680 g (1.5 lb)",
+    "operatingTemp": "-30\u00b0C to 40\u00b0C (-22\u00b0F to 104\u00b0F)",
+    "maxPower": 21
+  },
+  {
+    "id": "ubiquiti-u7-lr",
+    "manufacturer": "Ubiquiti",
+    "model": "U7 Long-Range",
+    "category": "access-point",
+    "ports": 1,
+    "wifiStandard": "Wi-Fi 7 (802.11be)",
+    "maxThroughputMbps": 4988,
+    "radios": {
+      "24ghz": true,
+      "5ghz": true,
+      "6ghz": false
+    },
+    "poeInput": "802.3af (PoE)",
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ratedClients": 300,
+    "msrp": 159,
+    "productUrl": "https://store.ui.com/us/en/products/u7-lr",
+    "imagePath": "images/ubiquiti-u7-lr.png",
+    "dimensions": "\u00d8175.7 x 43 mm (\u00d86.9 x 1.7\")",
+    "weight": "448 g (15.8 oz)",
+    "operatingTemp": "-30\u00b0C to 50\u00b0C (-22\u00b0F to 122\u00b0F)",
+    "maxPower": 14
+  },
+  {
+    "id": "ubiquiti-u7-lite",
+    "manufacturer": "Ubiquiti",
+    "model": "U7 Lite",
+    "category": "access-point",
+    "ports": 1,
+    "wifiStandard": "Wi-Fi 7 (802.11be)",
+    "maxThroughputMbps": 4988,
+    "radios": {
+      "24ghz": true,
+      "5ghz": true,
+      "6ghz": false
+    },
+    "poeInput": "802.3af (PoE)",
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ratedClients": 200,
+    "msrp": 99,
+    "productUrl": "https://store.ui.com/us/en/products/u7-lite",
+    "imagePath": "images/ubiquiti-u7-lite.png",
+    "dimensions": "\u00d8171.5 x 33 mm (\u00d86.8 x 1.3\")",
+    "weight": "313 g (11 oz)",
+    "operatingTemp": "-30\u00b0C to 40\u00b0C (-22\u00b0F to 104\u00b0F)",
+    "maxPower": 13
+  },
+  {
+    "id": "ubiquiti-u7-pro-xg-wall",
+    "manufacturer": "Ubiquiti",
+    "model": "U7 Pro XG Wall",
+    "category": "access-point",
+    "ports": 1,
+    "wifiStandard": "Wi-Fi 7 (802.11be)",
+    "maxThroughputMbps": 10788,
+    "radios": {
+      "24ghz": true,
+      "5ghz": true,
+      "6ghz": true
+    },
+    "poeInput": "802.3at (PoE+)",
+    "mounting": [
+      "wall"
+    ],
+    "ratedClients": 300,
+    "msrp": 279,
+    "productUrl": "https://store.ui.com/us/en/products/u7-pro-xg-wall",
+    "imagePath": "images/ubiquiti-u7-pro-xg-wall.png",
+    "dimensions": "155 x 108 x 33.5 mm (6.1 x 4.3 x 1.3\")",
+    "weight": "505 g (1.1 lb)",
+    "operatingTemp": "-30\u00b0C to 40\u00b0C (-22\u00b0F to 104\u00b0F)",
+    "maxPower": 22
+  },
+  {
+    "id": "ubiquiti-u7-pro-wall",
+    "manufacturer": "Ubiquiti",
+    "model": "U7 Pro Wall",
+    "category": "access-point",
+    "ports": 1,
+    "wifiStandard": "Wi-Fi 7 (802.11be)",
+    "maxThroughputMbps": 10788,
+    "radios": {
+      "24ghz": true,
+      "5ghz": true,
+      "6ghz": true
+    },
+    "poeInput": "802.3at (PoE+)",
+    "mounting": [
+      "wall"
+    ],
+    "ratedClients": 300,
+    "msrp": 199,
+    "productUrl": "https://store.ui.com/us/en/products/u7-pro-wall",
+    "imagePath": "images/ubiquiti-u7-pro-wall.png",
+    "dimensions": "150 x 103 x 36 mm (5.9 x 4.1 x 1.4\")",
+    "weight": "580 g (1.3 lb)",
+    "operatingTemp": "-30\u00b0C to 60\u00b0C (-22\u00b0F to 140\u00b0F)",
+    "maxPower": 22
+  },
+  {
+    "id": "ubiquiti-u7-iw",
+    "manufacturer": "Ubiquiti",
+    "model": "U7 In-Wall",
+    "category": "access-point",
+    "ports": 1,
+    "wifiStandard": "Wi-Fi 7 (802.11be)",
+    "maxThroughputMbps": 4988,
+    "radios": {
+      "24ghz": true,
+      "5ghz": true,
+      "6ghz": false
+    },
+    "poeInput": "802.3af (PoE)",
+    "mounting": [
+      "in-wall"
+    ],
+    "ratedClients": 200,
+    "msrp": 149,
+    "productUrl": "https://store.ui.com/us/en/products/u7-iw",
+    "imagePath": "images/ubiquiti-u7-iw.png",
+    "dimensions": "137 x 98.7 x 30.2 mm (5.4 x 3.9 x 1.2\")",
+    "weight": "400 g (14.1 oz)",
+    "operatingTemp": "-30\u00b0C to 40\u00b0C (-22\u00b0F to 104\u00b0F)",
+    "maxPower": 13
+  },
+  {
+    "id": "ubiquiti-u7-pro-outdoor",
+    "manufacturer": "Ubiquiti",
+    "model": "U7 Pro Outdoor",
+    "category": "access-point",
+    "ports": 1,
+    "wifiStandard": "Wi-Fi 7 (802.11be)",
+    "maxThroughputMbps": 10788,
+    "radios": {
+      "24ghz": true,
+      "5ghz": true,
+      "6ghz": true
+    },
+    "poeInput": "802.3at (PoE+)",
+    "mounting": [
+      "wall",
+      "outdoor"
+    ],
+    "ratedClients": 300,
+    "msrp": 279,
+    "productUrl": "https://store.ui.com/us/en/products/u7-pro-outdoor-us",
+    "imagePath": "images/ubiquiti-u7-pro-outdoor.png",
+    "dimensions": "170 x 208 x 66.5 mm (6.7 x 8.2 x 2.6\")",
+    "weight": "1.2 kg (2.6 lb)",
+    "operatingTemp": "-30\u00b0C to 60\u00b0C (-22\u00b0F to 140\u00b0F)",
+    "maxPower": 21
+  },
+  {
+    "id": "ubiquiti-u7-outdoor",
+    "manufacturer": "Ubiquiti",
+    "model": "U7 Outdoor",
+    "category": "access-point",
+    "ports": 1,
+    "wifiStandard": "Wi-Fi 7 (802.11be)",
+    "maxThroughputMbps": 4988,
+    "radios": {
+      "24ghz": true,
+      "5ghz": true,
+      "6ghz": false
+    },
+    "poeInput": "802.3at (PoE+)",
+    "mounting": [
+      "wall",
+      "outdoor"
+    ],
+    "ratedClients": 250,
+    "msrp": 199,
+    "productUrl": "https://store.ui.com/us/en/products/u7-outdoor",
+    "imagePath": "images/ubiquiti-u7-outdoor.png",
+    "dimensions": "170 x 208 x 54.5 mm (6.7 x 8.2 x 2.1\")",
+    "weight": "1.2 kg (2.6 lb)",
+    "operatingTemp": "-30\u00b0C to 60\u00b0C (-22\u00b0F to 140\u00b0F)",
+    "maxPower": 19
+  },
+  {
+    "id": "ubiquiti-u7-mesh",
+    "manufacturer": "Ubiquiti",
+    "model": "U7 Mesh",
+    "category": "access-point",
+    "ports": 1,
+    "wifiStandard": "Wi-Fi 7 (802.11be)",
+    "maxThroughputMbps": 4988,
+    "radios": {
+      "24ghz": true,
+      "5ghz": true,
+      "6ghz": false
+    },
+    "poeInput": "802.3af (PoE)",
+    "mounting": [
+      "wall",
+      "outdoor"
+    ],
+    "ratedClients": 200,
+    "msrp": 199,
+    "productUrl": "https://store.ui.com/us/en/products/u7-mesh",
+    "imagePath": "images/ubiquiti-u7-mesh.png",
+    "dimensions": "\u00d848.5 x 159.5 mm (\u00d81.9 x 6.3\")",
+    "weight": "313 g (11 oz)",
+    "operatingTemp": "-30\u00b0C to 60\u00b0C (-22\u00b0F to 140\u00b0F)",
+    "maxPower": 13
+  },
+  {
+    "id": "ubiquiti-u6-enterprise",
+    "manufacturer": "Ubiquiti",
+    "model": "U6 Enterprise",
+    "category": "access-point",
+    "ports": 1,
+    "wifiStandard": "Wi-Fi 6E (802.11ax)",
+    "maxThroughputMbps": 10174,
+    "radios": {
+      "24ghz": true,
+      "5ghz": true,
+      "6ghz": true
+    },
+    "poeInput": "802.3at (PoE+)",
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ratedClients": 600,
+    "msrp": 279,
+    "productUrl": "https://store.ui.com/us/en/products/u6-enterprise",
+    "imagePath": "images/ubiquiti-u6-enterprise.png",
+    "dimensions": "\u00d8220 x 48 mm (\u00d88.7 x 1.9\")",
+    "weight": "960 g (2.1 lb)",
+    "operatingTemp": "-30\u00b0C to 60\u00b0C (-22\u00b0F to 140\u00b0F)",
+    "maxPower": 22
+  },
+  {
+    "id": "ubiquiti-u6-pro",
+    "manufacturer": "Ubiquiti",
+    "model": "U6 Pro",
+    "category": "access-point",
+    "ports": 1,
+    "wifiStandard": "Wi-Fi 6 (802.11ax)",
+    "maxThroughputMbps": 5374,
+    "radios": {
+      "24ghz": true,
+      "5ghz": true,
+      "6ghz": false
+    },
+    "poeInput": "802.3af (PoE)",
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ratedClients": 250,
+    "msrp": 159,
+    "productUrl": "https://store.ui.com/us/en/products/u6-pro",
+    "imagePath": "images/ubiquiti-u6-pro.png",
+    "dimensions": "\u00d8197 x 35 mm (\u00d87.8 x 1.4\")",
+    "weight": "580 g (1.3 lb)",
+    "operatingTemp": "-30\u00b0C to 60\u00b0C (-22\u00b0F to 140\u00b0F)",
+    "maxPower": 13
+  },
+  {
+    "id": "ubiquiti-u6-lr",
+    "manufacturer": "Ubiquiti",
+    "model": "U6 Long-Range",
+    "category": "access-point",
+    "ports": 1,
+    "wifiStandard": "Wi-Fi 6 (802.11ax)",
+    "maxThroughputMbps": 3000,
+    "radios": {
+      "24ghz": true,
+      "5ghz": true,
+      "6ghz": false
+    },
+    "poeInput": "802.3at (PoE+)",
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ratedClients": 350,
+    "msrp": 179,
+    "productUrl": "https://store.ui.com/us/en/products/u6-lr",
+    "imagePath": "images/ubiquiti-u6-lr.png",
+    "dimensions": "\u00d8220 x 48 mm (\u00d88.7 x 1.9\")",
+    "weight": "800 g (1.8 lb)",
+    "operatingTemp": "-30\u00b0C to 60\u00b0C (-22\u00b0F to 140\u00b0F)",
+    "maxPower": 18.5
+  },
+  {
+    "id": "ubiquiti-u6-plus",
+    "manufacturer": "Ubiquiti",
+    "model": "U6+",
+    "category": "access-point",
+    "ports": 1,
+    "wifiStandard": "Wi-Fi 6 (802.11ax)",
+    "maxThroughputMbps": 2974,
+    "radios": {
+      "24ghz": true,
+      "5ghz": true,
+      "6ghz": false
+    },
+    "poeInput": "802.3af (PoE)",
+    "mounting": [
+      "ceiling",
+      "wall"
+    ],
+    "ratedClients": 300,
+    "msrp": 129,
+    "productUrl": "https://store.ui.com/us/en/products/u6-plus",
+    "imagePath": "images/ubiquiti-u6-plus.png",
+    "dimensions": "\u00d8160 x 33 mm (\u00d86.3 x 1.3\")",
+    "weight": "338 g (11.9 oz)",
+    "operatingTemp": "-30\u00b0C to 60\u00b0C (-22\u00b0F to 140\u00b0F)",
+    "maxPower": 9
+  },
+  {
+    "id": "ubiquiti-u6-enterprise-iw",
+    "manufacturer": "Ubiquiti",
+    "model": "U6 Enterprise In-Wall",
+    "category": "access-point",
+    "ports": 1,
+    "wifiStandard": "Wi-Fi 6E (802.11ax)",
+    "maxThroughputMbps": 10174,
+    "radios": {
+      "24ghz": true,
+      "5ghz": true,
+      "6ghz": true
+    },
+    "poeInput": "802.3at (PoE+)",
+    "mounting": [
+      "in-wall"
+    ],
+    "ratedClients": 600,
+    "msrp": 299,
+    "productUrl": "https://store.ui.com/us/en/products/u6-enterprise-iw",
+    "imagePath": "images/ubiquiti-u6-enterprise-iw.png",
+    "dimensions": "159.7 x 156.7 x 33.8 mm (6.3 x 6.2 x 1.3\")",
+    "weight": "884 g (1.9 lb)",
+    "operatingTemp": "-30\u00b0C to 60\u00b0C (-22\u00b0F to 140\u00b0F)",
+    "maxPower": 21
+  },
+  {
+    "id": "ubiquiti-u6-iw",
+    "manufacturer": "Ubiquiti",
+    "model": "U6 In-Wall",
+    "category": "access-point",
+    "ports": 1,
+    "wifiStandard": "Wi-Fi 6 (802.11ax)",
+    "maxThroughputMbps": 5374,
+    "radios": {
+      "24ghz": true,
+      "5ghz": true,
+      "6ghz": false
+    },
+    "poeInput": "802.3af (PoE)",
+    "mounting": [
+      "in-wall"
+    ],
+    "ratedClients": 250,
+    "msrp": 179,
+    "productUrl": "https://store.ui.com/us/en/products/u6-iw",
+    "imagePath": "images/ubiquiti-u6-iw.png",
+    "dimensions": "139.7 x 96 x 31.2 mm (5.5 x 3.8 x 1.3\")",
+    "weight": "460 g (1 lb)",
+    "operatingTemp": "-30\u00b0C to 60\u00b0C (-22\u00b0F to 140\u00b0F)",
+    "maxPower": 13
+  },
+  {
+    "id": "ubiquiti-u6-mesh-pro",
+    "manufacturer": "Ubiquiti",
+    "model": "U6 Mesh Pro",
+    "category": "access-point",
+    "ports": 1,
+    "wifiStandard": "Wi-Fi 6 (802.11ax)",
+    "maxThroughputMbps": 2974,
+    "radios": {
+      "24ghz": true,
+      "5ghz": true,
+      "6ghz": false
+    },
+    "poeInput": "802.3af (PoE)",
+    "mounting": [
+      "wall",
+      "outdoor"
+    ],
+    "ratedClients": 250,
+    "msrp": 199,
+    "productUrl": "https://store.ui.com/us/en/products/u6-mesh-pro",
+    "imagePath": "images/ubiquiti-u6-mesh-pro.png",
+    "dimensions": "343.2 x 181.2 x 60.2 mm (13.5 x 7.1 x 2.4\")",
+    "weight": "819 g (1.8 lb)",
+    "operatingTemp": "-30\u00b0C to 60\u00b0C (-22\u00b0F to 140\u00b0F)",
+    "maxPower": 9
+  },
+  {
+    "id": "ubiquiti-u6-mesh",
+    "manufacturer": "Ubiquiti",
+    "model": "U6 Mesh",
+    "category": "access-point",
+    "ports": 1,
+    "wifiStandard": "Wi-Fi 6 (802.11ax)",
+    "maxThroughputMbps": 5374,
+    "radios": {
+      "24ghz": true,
+      "5ghz": true,
+      "6ghz": false
+    },
+    "poeInput": "802.3af (PoE)",
+    "mounting": [
+      "wall",
+      "outdoor"
+    ],
+    "ratedClients": 250,
+    "msrp": 179,
+    "productUrl": "https://store.ui.com/us/en/products/u6-mesh",
+    "imagePath": "images/ubiquiti-u6-mesh.png",
+    "dimensions": "\u00d848.5 x 159.5 mm (\u00d81.9 x 6.3\")",
+    "weight": "400 g (14.1 oz)",
+    "operatingTemp": "-30\u00b0C to 60\u00b0C (-22\u00b0F to 140\u00b0F)",
+    "maxPower": 13
+  }
+]

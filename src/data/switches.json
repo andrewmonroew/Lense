@@ -1,0 +1,441 @@
+[
+  {
+    "id": "ubiquiti-usw-lite-8-poe",
+    "manufacturer": "Ubiquiti",
+    "model": "USW Lite 8 PoE",
+    "category": "switch",
+    "ports": 8,
+    "poePorts": 4,
+    "poeBudget": 52,
+    "sfpPorts": 0,
+    "managed": true,
+    "msrp": 109,
+    "productUrl": "https://store.ui.com/us/en/products/usw-lite-8-poe",
+    "imagePath": "images/ubiquiti-usw-lite-8-poe.png",
+    "dimensions": "99.6 x 163.7 x 31.7 mm",
+    "weight": "295 g",
+    "operatingTemp": "-15\u00b0C to 40\u00b0C (5\u00b0F to 104\u00b0F)",
+    "mountType": "Desktop",
+    "switchingCapacityGbps": 8,
+    "poePortGroups": [
+      {
+        "count": 4,
+        "standard": "802.3at",
+        "maxWatts": 30
+      }
+    ]
+  },
+  {
+    "id": "ubiquiti-usw-lite-16-poe",
+    "manufacturer": "Ubiquiti",
+    "model": "USW Lite 16 PoE",
+    "category": "switch",
+    "ports": 16,
+    "poePorts": 8,
+    "poeBudget": 45,
+    "sfpPorts": 0,
+    "managed": true,
+    "msrp": 199,
+    "productUrl": "https://store.ui.com/us/en/products/usw-lite-16-poe",
+    "imagePath": "images/ubiquiti-usw-lite-16-poe.png",
+    "dimensions": "191.7 x 185 x 43.7 mm",
+    "weight": "1.2 kg",
+    "operatingTemp": "-15\u00b0C to 40\u00b0C (5\u00b0F to 104\u00b0F)",
+    "mountType": "Desktop",
+    "switchingCapacityGbps": 16,
+    "poePortGroups": [
+      {
+        "count": 8,
+        "standard": "802.3at",
+        "maxWatts": 32
+      }
+    ]
+  },
+  {
+    "id": "ubiquiti-usw-24-poe",
+    "manufacturer": "Ubiquiti",
+    "model": "USW Pro 24 PoE",
+    "category": "switch",
+    "ports": 24,
+    "poePorts": 24,
+    "poeBudget": 400,
+    "sfpPorts": 2,
+    "managed": true,
+    "msrp": 699,
+    "productUrl": "https://store.ui.com/us/en/products/usw-pro-24-poe",
+    "imagePath": "images/ubiquiti-usw-24-poe.png",
+    "dimensions": "442.4 x 285.4 x 43.7 mm",
+    "weight": "4.3 kg",
+    "operatingTemp": "-5\u00b0C to 40\u00b0C (23\u00b0F to 104\u00b0F)",
+    "mountType": "Rackmount (1U)",
+    "switchingCapacityGbps": 88,
+    "poePortGroups": [
+      {
+        "count": 16,
+        "standard": "802.3at",
+        "maxWatts": 32
+      },
+      {
+        "count": 8,
+        "standard": "802.3bt",
+        "maxWatts": 64
+      }
+    ],
+    "sfpNote": "SFP+ 25-26: 1/10G, data only (no PoE)"
+  },
+  {
+    "id": "ubiquiti-usw-48-poe",
+    "manufacturer": "Ubiquiti",
+    "model": "USW Pro 48 PoE",
+    "category": "switch",
+    "ports": 48,
+    "poePorts": 48,
+    "poeBudget": 600,
+    "sfpPorts": 4,
+    "managed": true,
+    "msrp": 1099,
+    "productUrl": "https://store.ui.com/us/en/products/usw-pro-48-poe",
+    "imagePath": "images/ubiquiti-usw-48-poe.png",
+    "dimensions": "442.4 x 399.6 x 43.7 mm",
+    "weight": "6.2 kg",
+    "operatingTemp": "-5\u00b0C to 40\u00b0C (23\u00b0F to 104\u00b0F)",
+    "mountType": "Rackmount (1U)",
+    "switchingCapacityGbps": 176,
+    "poePortGroups": [
+      {
+        "count": 40,
+        "standard": "802.3at",
+        "maxWatts": 32
+      },
+      {
+        "count": 8,
+        "standard": "802.3bt",
+        "maxWatts": 60
+      }
+    ]
+  },
+  {
+    "id": "ubiquiti-usw-pro-max-16-poe",
+    "manufacturer": "Ubiquiti",
+    "model": "USW Pro Max 16 PoE",
+    "category": "switch",
+    "ports": 18,
+    "poePorts": 16,
+    "poeBudget": 180,
+    "sfpPorts": 2,
+    "managed": true,
+    "msrp": 399,
+    "productUrl": "https://store.ui.com/us/en/products/usw-pro-max-16-poe",
+    "imagePath": "images/ubiquiti-usw-pro-max-16-poe.png",
+    "dimensions": "325.1 x 160 x 43.7 mm",
+    "weight": "2.1 kg",
+    "operatingTemp": "-5\u00b0C to 40\u00b0C (23\u00b0F to 104\u00b0F)",
+    "mountType": "Rackmount (1U) / Desktop / Wall",
+    "switchingCapacityGbps": 84,
+    "poePortGroups": [
+      {
+        "count": 12,
+        "standard": "802.3at",
+        "maxWatts": 32
+      },
+      {
+        "count": 4,
+        "standard": "802.3bt",
+        "maxWatts": 60
+      }
+    ]
+  },
+  {
+    "id": "ubiquiti-usw-pro-max-24-poe",
+    "manufacturer": "Ubiquiti",
+    "model": "USW Pro Max 24 PoE",
+    "category": "switch",
+    "ports": 26,
+    "poePorts": 24,
+    "poeBudget": 400,
+    "sfpPorts": 2,
+    "managed": true,
+    "msrp": 799,
+    "productUrl": "https://store.ui.com/us/en/products/usw-pro-max-24-poe",
+    "imagePath": "images/ubiquiti-usw-pro-max-24-poe.png",
+    "dimensions": "442 x 325 x 44 mm",
+    "weight": "5.1 kg",
+    "operatingTemp": "-5\u00b0C to 40\u00b0C (23\u00b0F to 104\u00b0F)",
+    "mountType": "Rackmount (1U)",
+    "switchingCapacityGbps": 112,
+    "poePortGroups": [
+      {
+        "count": 8,
+        "standard": "802.3at",
+        "maxWatts": 32
+      },
+      {
+        "count": 16,
+        "standard": "802.3bt",
+        "maxWatts": 60
+      }
+    ]
+  },
+  {
+    "id": "ubiquiti-usw-pro-max-48-poe",
+    "manufacturer": "Ubiquiti",
+    "model": "USW Pro Max 48 PoE",
+    "category": "switch",
+    "ports": 52,
+    "poePorts": 48,
+    "poeBudget": 720,
+    "sfpPorts": 4,
+    "managed": true,
+    "msrp": 1299,
+    "productUrl": "https://store.ui.com/us/en/products/usw-pro-max-48-poe",
+    "imagePath": "images/ubiquiti-usw-pro-max-48-poe.png",
+    "dimensions": "442.4 x 400 x 44 mm",
+    "weight": "6.2 kg",
+    "operatingTemp": "-5\u00b0C to 40\u00b0C (23\u00b0F to 104\u00b0F)",
+    "mountType": "Rackmount (1U)",
+    "switchingCapacityGbps": 224,
+    "poePortGroups": [
+      {
+        "count": 32,
+        "standard": "802.3at",
+        "maxWatts": 32
+      },
+      {
+        "count": 16,
+        "standard": "802.3bt",
+        "maxWatts": 64
+      }
+    ]
+  },
+  {
+    "id": "ubiquiti-usw-pro-hd-24-poe",
+    "manufacturer": "Ubiquiti",
+    "model": "USW Pro HD 24 PoE",
+    "category": "switch",
+    "ports": 28,
+    "poePorts": 24,
+    "poeBudget": 600,
+    "sfpPorts": 4,
+    "managed": true,
+    "msrp": 999,
+    "productUrl": "https://store.ui.com/us/en/products/usw-pro-hd-24-poe",
+    "imagePath": "images/ubiquiti-usw-pro-hd-24-poe.png",
+    "dimensions": "442 x 400 x 44 mm",
+    "weight": "6.2 kg",
+    "operatingTemp": "-5\u00b0C to 40\u00b0C (23\u00b0F to 104\u00b0F)",
+    "mountType": "Rackmount (1U)",
+    "switchingCapacityGbps": 230,
+    "poePortGroups": [
+      {
+        "count": 24,
+        "standard": "802.3bt",
+        "maxWatts": 64
+      }
+    ]
+  },
+  {
+    "id": "ubiquiti-usw-pro-xg-24-poe",
+    "manufacturer": "Ubiquiti",
+    "model": "USW Pro XG 24 PoE",
+    "category": "switch",
+    "ports": 26,
+    "poePorts": 24,
+    "poeBudget": 720,
+    "sfpPorts": 2,
+    "managed": true,
+    "msrp": 1799,
+    "productUrl": "https://store.ui.com/us/en/products/usw-pro-xg-24-poe",
+    "imagePath": "images/ubiquiti-usw-pro-xg-24-poe.png",
+    "dimensions": "442 x 480 x 44 mm",
+    "weight": "7.9 kg",
+    "operatingTemp": "-5\u00b0C to 40\u00b0C (23\u00b0F to 104\u00b0F)",
+    "mountType": "Rackmount (1U)",
+    "switchingCapacityGbps": 460,
+    "poePortGroups": [
+      {
+        "count": 24,
+        "standard": "802.3bt",
+        "maxWatts": 90
+      }
+    ]
+  },
+  {
+    "id": "ubiquiti-usw-pro-xg-48-poe",
+    "manufacturer": "Ubiquiti",
+    "model": "USW Pro XG 48 PoE",
+    "category": "switch",
+    "ports": 52,
+    "poePorts": 48,
+    "poeBudget": 1080,
+    "sfpPorts": 4,
+    "managed": true,
+    "msrp": 2499,
+    "productUrl": "https://store.ui.com/us/en/products/usw-pro-xg-48-poe",
+    "imagePath": "images/ubiquiti-usw-pro-xg-48-poe.png",
+    "dimensions": "442 x 480 x 44 mm",
+    "weight": "8.7 kg",
+    "operatingTemp": "-5\u00b0C to 40\u00b0C (23\u00b0F to 104\u00b0F)",
+    "mountType": "Rackmount (1U)",
+    "switchingCapacityGbps": 920,
+    "poePortGroups": [
+      {
+        "count": 48,
+        "standard": "802.3bt",
+        "maxWatts": 90
+      }
+    ]
+  },
+  {
+    "id": "ubiquiti-ecs-24-poe",
+    "manufacturer": "Ubiquiti",
+    "model": "Enterprise Campus 24 PoE",
+    "category": "switch",
+    "ports": 26,
+    "poePorts": 24,
+    "poeBudget": 2250,
+    "sfpPorts": 2,
+    "managed": true,
+    "msrp": 2499,
+    "productUrl": "https://store.ui.com/us/en/category/switching-enterprise/collections/enterprise-campus/products/ecs-24-poe",
+    "imagePath": "images/ubiquiti-ecs-24-poe.png",
+    "dimensions": "442.4 x 43.7 x 496 mm",
+    "weight": "9.46 kg",
+    "operatingTemp": "-5\u00b0C to 40\u00b0C (23\u00b0F to 104\u00b0F)",
+    "mountType": "Rackmount (1U, full-depth)",
+    "switchingCapacityGbps": 460,
+    "poePortGroups": [
+      {
+        "count": 24,
+        "standard": "802.3bt",
+        "maxWatts": 90
+      }
+    ]
+  },
+  {
+    "id": "ubiquiti-ecs-48-poe",
+    "manufacturer": "Ubiquiti",
+    "model": "Enterprise Campus 48 PoE",
+    "category": "switch",
+    "ports": 52,
+    "poePorts": 48,
+    "poeBudget": 2150,
+    "sfpPorts": 4,
+    "managed": true,
+    "msrp": 3499,
+    "productUrl": "https://store.ui.com/us/en/category/switching-enterprise/collections/enterprise-campus/products/ecs-48-poe",
+    "imagePath": "images/ubiquiti-ecs-48-poe.png",
+    "dimensions": "442.4 x 43.7 x 496 mm",
+    "weight": "9.46 kg",
+    "operatingTemp": "-5\u00b0C to 40\u00b0C (23\u00b0F to 104\u00b0F)",
+    "mountType": "Rackmount (1U, full-depth)",
+    "switchingCapacityGbps": 920,
+    "poePortGroups": [
+      {
+        "count": 48,
+        "standard": "802.3bt",
+        "maxWatts": 90
+      }
+    ]
+  },
+  {
+    "id": "ubiquiti-usw-flex-mini",
+    "manufacturer": "Ubiquiti",
+    "model": "USW Flex Mini",
+    "category": "switch",
+    "ports": 5,
+    "poePorts": 0,
+    "poeBudget": 0,
+    "sfpPorts": 0,
+    "managed": true,
+    "msrp": 29,
+    "productUrl": "https://store.ui.com/us/en/products/usw-flex-mini",
+    "imagePath": "images/ubiquiti-usw-flex-mini.png",
+    "dimensions": "107 x 70 x 21 mm",
+    "weight": "150 g",
+    "operatingTemp": "-5\u00b0C to 45\u00b0C (23\u00b0F to 113\u00b0F)",
+    "mountType": "Desktop",
+    "switchingCapacityGbps": 10,
+    "poeInput": "802.3af (PoE)",
+    "maxPower": 2.5,
+    "poeOutputByInput": {}
+  },
+  {
+    "id": "ubiquiti-usw-flex-mini-2-5g",
+    "manufacturer": "Ubiquiti",
+    "model": "USW Flex Mini 2.5G",
+    "category": "switch",
+    "ports": 5,
+    "poePorts": 0,
+    "poeBudget": 0,
+    "sfpPorts": 0,
+    "managed": true,
+    "msrp": 49,
+    "productUrl": "https://store.ui.com/us/en/products/usw-flex-2-5g-5",
+    "imagePath": "images/ubiquiti-usw-flex-mini-2-5g.png",
+    "dimensions": "117.1 x 90 x 21.2 mm",
+    "weight": "206 g",
+    "operatingTemp": "-20\u00b0C to 45\u00b0C (-4\u00b0F to 113\u00b0F)",
+    "mountType": "Desktop",
+    "switchingCapacityGbps": 25,
+    "poeInput": "802.3af (PoE)",
+    "maxPower": 6.4,
+    "poeOutputByInput": {}
+  },
+  {
+    "id": "ubiquiti-usw-flex-xg",
+    "manufacturer": "Ubiquiti",
+    "model": "USW Flex XG",
+    "category": "switch",
+    "ports": 5,
+    "poePorts": 0,
+    "poeBudget": 0,
+    "sfpPorts": 0,
+    "managed": true,
+    "msrp": 299,
+    "productUrl": "https://store.ui.com/us/en/products/usw-flex-xg",
+    "imagePath": "images/ubiquiti-usw-flex-xg.png",
+    "dimensions": "135 x 185 x 32 mm",
+    "weight": "1.2 kg",
+    "operatingTemp": "-5\u00b0C to 45\u00b0C (23\u00b0F to 113\u00b0F)",
+    "mountType": "Desktop / Wall",
+    "switchingCapacityGbps": 82,
+    "poeInput": "802.3at (PoE+)",
+    "maxPower": 25,
+    "poeOutputByInput": {}
+  },
+  {
+    "id": "ubiquiti-usw-flex",
+    "manufacturer": "Ubiquiti",
+    "model": "USW Flex",
+    "category": "switch",
+    "ports": 5,
+    "poePorts": 4,
+    "poeBudget": 46,
+    "sfpPorts": 0,
+    "managed": true,
+    "msrp": 99,
+    "productUrl": "https://store.ui.com/us/en/products/usw-flex",
+    "imagePath": "images/ubiquiti-usw-flex.png",
+    "dimensions": "122.5 x 107.1 x 28 mm",
+    "weight": "230 g",
+    "operatingTemp": "-40\u00b0C to 55\u00b0C (-40\u00b0F to 131\u00b0F)",
+    "mountType": "Outdoor / Wall (Weatherproof)",
+    "switchingCapacityGbps": 10,
+    "poePortGroups": [
+      {
+        "count": 4,
+        "standard": "802.3at",
+        "maxWatts": 25,
+        "firstPort": 2
+      }
+    ],
+    "poeInputPort": 1,
+    "poeInput": "802.3af (PoE)",
+    "poeOutputByInput": {
+      "802.3af": 8,
+      "802.3at": 20,
+      "802.3bt": 46
+    },
+    "maxPower": 60
+  }
+]

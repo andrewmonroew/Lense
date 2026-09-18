@@ -1,0 +1,62 @@
+[
+  {
+    "id": "generic-wall-drop-1port",
+    "manufacturer": "Generic",
+    "model": "Single Port Wall Drop",
+    "category": "drop",
+    "ports": 1,
+    "keystoneType": "Cat6 RJ45",
+    "mountType": "Wall Plate (1-Gang)",
+    "msrp": 0
+  },
+  {
+    "id": "generic-wall-drop-2port",
+    "manufacturer": "Generic",
+    "model": "Dual Port Wall Drop",
+    "category": "drop",
+    "ports": 2,
+    "keystoneType": "Cat6 RJ45",
+    "mountType": "Wall Plate (2-Gang)",
+    "msrp": 0
+  },
+  {
+    "id": "generic-wall-drop-3port",
+    "manufacturer": "Generic",
+    "model": "Triple Port Wall Drop",
+    "category": "drop",
+    "ports": 3,
+    "keystoneType": "Cat6 RJ45",
+    "mountType": "Wall Plate (1-Gang)",
+    "msrp": 0
+  },
+  {
+    "id": "generic-wall-drop-4port",
+    "manufacturer": "Generic",
+    "model": "Quad Port Wall Drop",
+    "category": "drop",
+    "ports": 4,
+    "keystoneType": "Cat6 RJ45",
+    "mountType": "Wall Plate (1-Gang)",
+    "msrp": 0
+  },
+  {
+    "id": "generic-wall-drop-5port",
+    "manufacturer": "Generic",
+    "model": "5-Port Wall Drop",
+    "category": "drop",
+    "ports": 5,
+    "keystoneType": "Cat6 RJ45",
+    "mountType": "Wall Plate (2-Gang)",
+    "msrp": 0
+  },
+  {
+    "id": "generic-wall-drop-6port",
+    "manufacturer": "Generic",
+    "model": "6-Port Wall Drop",
+    "category": "drop",
+    "ports": 6,
+    "keystoneType": "Cat6 RJ45",
+    "mountType": "Wall Plate (2-Gang)",
+    "msrp": 0
+  }
+]

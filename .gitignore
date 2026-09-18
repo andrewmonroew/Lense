@@ -1,0 +1,43 @@
+# ── Build output ───────────────────────────────────────────────────────────────
+build/
+dist/
+*.spec.bak
+
+# ── Python ─────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+*.egg-info/
+
+# ── Runtime files the app writes ───────────────────────────────────────────────
+logs/
+
+# ── Projects ───────────────────────────────────────────────────────────────────
+# .lense files embed the floor plan image itself, so they carry customer property
+# photos, addresses and site names. Keep real jobs out of a public repository.
+*.lense
+*.lense.bak
+
+# ── Legacy prototype ───────────────────────────────────────────────────────────
+# The original browser mock-up, dead since the PySide6 rewrite. Nothing imports
+# it. Kept on disk for reference; delete whenever you like.
+# Leading slash matters: these names also exist under src/data/icons/, where they
+# are icons the app actually loads. Unanchored, they would be excluded too and a
+# fresh clone would start with pieces of its own artwork missing.
+/index.html
+/src/engine/
+/src/objects/
+/src/styles/
+/camera.png
+/NVR.png
+/switch.png
+/WAN.png
+/testimage.jpg
+
+# ── Editor / tooling ───────────────────────────────────────────────────────────
+.claude/settings.local.json
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
