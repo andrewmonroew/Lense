@@ -1,4 +1,6 @@
-from PySide6.QtGui import QFont, QColor, QBrush, QPen
+from functools import lru_cache
+
+from PySide6.QtGui import QFont, QFontMetricsF, QColor, QBrush, QPen, QGuiApplication
 from PySide6.QtCore import QRectF, QPointF, Qt
 
 
@@ -23,18 +25,54 @@ def label_font_size():
     return _label_font_size
 
 
+# The label pill's padding around its text, in screen pixels. Shared by the painter
+# and the size estimate so the two can't drift apart.
+LABEL_PAD_X = 5.0
+LABEL_PAD_Y = 2.0
+
+# Extra room on the measured width for antialiasing and the pill's rounded edge,
+# which both spill a pixel or two past the text's advance.
+LABEL_EDGE_PX = 4.0
+
+
+def label_font(font_size=None):
+    """The exact font labels are painted in -- measured with the same one, always."""
+    font = QFont("Inter", _label_font_size if font_size is None else font_size)
+    font.setWeight(QFont.DemiBold)
+    return font
+
+
+@lru_cache(maxsize=4096)
+def _measured_text_px(text, size):
+    """The real advance of `text` in the label font, in screen pixels.
+
+    Cached per (text, size): this sits under boundingRect(), which Qt calls hundreds of
+    times a frame, and a label's text only changes when someone renames the item.
+    """
+    if not text or QGuiApplication.instance() is None:
+        return 0.0
+    return QFontMetricsF(label_font(size)).horizontalAdvance(text)
+
+
 def label_local_size(text, lod, font_size=None):
-    """Approximate (width, height) of a drawn label, in the item's LOCAL units.
+    """(width, height) of a drawn label, in the item's LOCAL units.
 
     Labels render at a constant on-screen size (draw_item_label cancels the view
     transform), so their footprint in local units grows as you zoom out -- by 1/lod.
-    Estimated from the text length rather than measured with QFontMetrics because this
-    feeds boundingRect(), which Qt calls hundreds of times per frame. Deliberately
-    generous: over-reporting costs a slightly larger repaint region, under-reporting
-    leaves smeared label trails behind a dragged item.
+    Deliberately generous: over-reporting costs a slightly larger repaint region,
+    under-reporting leaves smeared label trails behind a dragged item.
+
+    The width used to be estimated from the character count alone, which held for the
+    font this was developed against and nowhere else. "Inter" is not a Windows font:
+    there Qt substitutes a wider face, the text outran the estimate, and every label
+    painted past its own bounding rect. It now takes whichever is larger, the old
+    estimate or the text actually measured in the font it will be painted in -- so it
+    can only ever have grown, and never shrinks anything that already fitted.
     """
     size = _label_font_size if font_size is None else font_size
-    width_px = size * 0.75 * max(1, len(text or "")) + 20.0
+    estimated_px = size * 0.75 * max(1, len(text or "")) + 20.0
+    measured_px = _measured_text_px(text or "", size) + LABEL_PAD_X * 2.0 + LABEL_EDGE_PX
+    width_px = max(estimated_px, measured_px)
     height_px = size * 2.2 + 8.0
     lod = lod if lod and lod > 0 else 1.0
     return width_px / lod, height_px / lod
@@ -167,14 +205,12 @@ def draw_item_label(painter, anchor_pt, text, scale, font_size=None):
     painter.translate(anchor_pt)
     painter.scale(scale, scale)
 
-    font = QFont("Inter", _label_font_size if font_size is None else font_size)
-    font.setWeight(QFont.DemiBold)
-    painter.setFont(font)
+    painter.setFont(label_font(font_size))
 
     metrics = painter.fontMetrics()
     text_width = metrics.horizontalAdvance(text)
     text_height = metrics.height()
-    pad_x, pad_y = 5.0, 2.0
+    pad_x, pad_y = LABEL_PAD_X, LABEL_PAD_Y
     rect = QRectF(-text_width / 2.0 - pad_x, 0.0, text_width + pad_x * 2.0, text_height + pad_y * 2.0)
 
     painter.setPen(Qt.NoPen)
