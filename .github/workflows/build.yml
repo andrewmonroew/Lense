@@ -29,25 +29,34 @@ jobs:
     name: tests (linux)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: pip
 
       # Qt needs these even to render offscreen -- without them PySide6 imports
-      # fine and then dies the moment a QApplication is constructed.
+      # fine and then dies the moment a QApplication is constructed. libpulse0 is
+      # for QtMultimedia (the splash chime): the minimal runner has no PulseAudio
+      # client, so the import fails and the player the tests check never loads.
       - name: Install Qt runtime libraries
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
-            libegl1 libgl1 libxkbcommon0 libdbus-1-3 libglib2.0-0
+            libegl1 libgl1 libxkbcommon0 libdbus-1-3 libglib2.0-0 libpulse0
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      # The app swallows a QtMultimedia import failure on purpose (a machine with
+      # no audio still has to start), which also hides WHY it failed. Importing it
+      # bare here means a missing system library is named in the log, not
+      # reduced to "the player loads: FAIL".
+      - name: Check QtMultimedia loads
+        run: python -c "from PySide6.QtMultimedia import QMediaPlayer, QAudioOutput; print('QtMultimedia OK')"
 
       - name: Run the regression suite
         env:
@@ -59,9 +68,9 @@ jobs:
     needs: test
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: ${{ env.PYTHON_VERSION }}
           cache: pip
@@ -92,7 +101,7 @@ jobs:
         shell: pwsh
         run: Copy-Item "READ ME FIRST.txt" dist\
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: Lense-windows-${{ github.sha }}
           path: |
@@ -110,9 +119,9 @@ jobs:
     permissions:
       contents: write      # the only job that can write to the repository
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: Lense-windows-${{ github.sha }}
           path: release
