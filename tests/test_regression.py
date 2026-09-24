@@ -2282,6 +2282,84 @@ ok("Restore Defaults puts the category back", _term.default_method("camera") == 
 
 _term.clear_defaults()
 
+print("\n== Zone boxes can be dragged ==")
+# A label/zone box is positioned by its own points, with the item itself parked at the
+# origin -- that is what the project file stores and what duplication translates. It was
+# created selectable but never movable, so it could be picked but never moved, and the
+# undo path that decides "did this drag change anything" only looked at pos(), which for
+# a zone never changes.
+fresh()
+cv.setTransform(QTransform()); cv._zoom_changed()
+cv.setSceneRect(QRectF(0, 0, 1000, 700)); cv.centerOn(500, 350)
+cv.set_tool("select")
+_zbox = ZoneItem([QPointF(400, 300), QPointF(600, 300), QPointF(600, 420), QPointF(400, 420)],
+                 label="Outdoor Enclosure")
+_zbox.is_box = True
+cv.scene_obj.addItem(_zbox)
+app.processEvents()
+
+def _zone_pts(zone):
+    return [(round(p.x()), round(p.y())) for p in zone.points]
+
+def _drag(world_from, dx, dy):
+    def event(kind, pt, button, buttons):
+        pos = cv.mapFromScene(pt)
+        return _QME(kind, pos, cv.viewport().mapToGlobal(pos), button, buttons, Qt.NoModifier)
+    cv.mousePressEvent(event(_QEv.MouseButtonPress, world_from, Qt.LeftButton, Qt.LeftButton))
+    for fraction in (0.5, 1.0):
+        moved_to = QPointF(world_from.x() + dx * fraction, world_from.y() + dy * fraction)
+        cv.mouseMoveEvent(event(_QEv.MouseMove, moved_to, Qt.NoButton, Qt.LeftButton))
+    cv.mouseReleaseEvent(event(_QEv.MouseButtonRelease, QPointF(world_from.x() + dx, world_from.y() + dy),
+                               Qt.LeftButton, Qt.NoButton))
+
+_zcentre = QPointF(500, 360)
+ok("the box is what sits under the cursor", cv.itemAt(cv.mapFromScene(_zcentre)) is _zbox)
+_zbefore = _zone_pts(_zbox)
+_drag(_zcentre, 60, 40)
+_zafter = _zone_pts(_zbox)
+ok("dragging the body moves the box",
+   _zafter == [(x + 60, y + 40) for x, y in _zbefore])
+ok("and it stays selected", _zbox.isSelected())
+# The geometry has to live in the points, not in the item's position, or it is lost
+# the moment the project is saved.
+ok("the item itself stays at the origin", _zbox.pos() == QPointF(0, 0))
+
+_zsaved = win._serialize_state()
+_zentry = next(z for z in _zsaved["zones"] if z["label"] == "Outdoor Enclosure")
+ok("the move survives a save", [(round(x), round(y)) for x, y in _zentry["points"]] == _zafter)
+cv.scene_obj.clear(); cv.floorplan_item = None
+win._restore_state(_zsaved)
+_zreloaded = next(i for i in cv.scene_obj.items()
+                  if getattr(i, "object_type", None) == "zone" and i.label == "Outdoor Enclosure")
+ok("and a reload", _zone_pts(_zreloaded) == _zafter)
+
+win.undo_manager.undo()
+_zafter_undo = next(i for i in cv.scene_obj.items()
+                    if getattr(i, "object_type", None) == "zone" and i.label == "Outdoor Enclosure")
+ok("undo puts it back", _zone_pts(_zafter_undo) == _zbefore)
+win.undo_manager.redo()
+_zafter_redo = next(i for i in cv.scene_obj.items()
+                    if getattr(i, "object_type", None) == "zone" and i.label == "Outdoor Enclosure")
+ok("redo moves it again", _zone_pts(_zafter_redo) == _zafter)
+
+# Selecting without dragging must not litter the undo stack.
+_zdepth = len(win.undo_manager.undo_stack)
+_drag(QPointF(_zafter_redo.points[0].x() + 40, _zafter_redo.points[0].y() + 30), 0, 0)
+ok("a click that moves nothing adds no undo entry",
+   len(win.undo_manager.undo_stack) == _zdepth)
+
+# Vertex editing still resizes rather than moving the whole shape.
+_zafter_redo.editing_vertices = True
+_zopposite = (round(_zafter_redo.points[0].x()), round(_zafter_redo.points[0].y()))
+_zcorner = QPointF(_zafter_redo.points[2])
+_drag(_zcorner, 40, 20)
+_zresized = _zone_pts(_zafter_redo)
+ok("a corner drag still resizes rather than moving the box",
+   _zresized[0] == _zopposite                       # the opposite corner is the anchor
+   and _zresized[2] == (round(_zcorner.x()) + 40, round(_zcorner.y()) + 20))
+_zafter_redo.editing_vertices = False
+cv.setTransform(QTransform()); cv._zoom_changed()
+
 print("\n== Splash chime ==")
 import src.main as _splash_main
 from src.core.utils import get_data_dir as _gdd

@@ -57,6 +57,10 @@ class ZoneItem(QGraphicsItem):
         self.editing_vertices = False
         self.dragging_vertex_index = None
         self.vertex_handle_radius = 6.0
+        # Where the cursor was last seen while dragging the whole shape, in scene
+        # coordinates. None when no drag is in progress. See mouseMoveEvent for why
+        # this moves the points rather than the item's position.
+        self._drag_last_scene_pos = None
         self._box_resize_anchor = None  # fixed opposite corner, captured when a box resize-drag starts
 
     def set_points(self, points):
@@ -180,6 +184,22 @@ class ZoneItem(QGraphicsItem):
             return
         super().mouseDoubleClickEvent(event)
 
+    def translate_by(self, dx, dy):
+        """Shift the whole shape, keeping its geometry in `points`.
+
+        A zone is positioned by its points, not by the item's pos(): that is what the
+        project file stores, what duplication translates, and what every consumer of
+        `points` reads as scene coordinates. Moving it with pos() instead would look
+        right on screen and vanish on save.
+        """
+        if not dx and not dy:
+            return
+        # Before the geometry changes, never after -- Qt has to drop the item from the
+        # scene's spatial index while the old rect is still valid.
+        self.prepareGeometryChange()
+        self.points = [QPointF(pt.x() + dx, pt.y() + dy) for pt in self.points]
+        self.update()
+
     def mousePressEvent(self, event):
         if self.editing_vertices and event.button() == Qt.LeftButton:
             vertex_index = self._vertex_at(event.pos())
@@ -194,6 +214,9 @@ class ZoneItem(QGraphicsItem):
                 self.setCursor(Qt.ClosedHandCursor)
                 event.accept()
                 return
+        if event.button() == Qt.LeftButton:
+            # Anywhere else on the shape starts a move of the whole thing.
+            self._drag_last_scene_pos = event.scenePos()
         super().mousePressEvent(event)
 
     def mouseMoveEvent(self, event):
@@ -207,6 +230,15 @@ class ZoneItem(QGraphicsItem):
             self.update()
             event.accept()
             return
+        if self._drag_last_scene_pos is not None and (event.buttons() & Qt.LeftButton):
+            # Dragged by hand rather than by Qt's ItemIsMovable, which would move the
+            # item's pos() and leave `points` -- the only thing saved -- untouched.
+            delta = event.scenePos() - self._drag_last_scene_pos
+            self._drag_last_scene_pos = event.scenePos()
+            self.translate_by(delta.x(), delta.y())
+            self.setCursor(Qt.ClosedHandCursor)
+            event.accept()
+            return
         super().mouseMoveEvent(event)
 
     def mouseReleaseEvent(self, event):
@@ -216,12 +248,19 @@ class ZoneItem(QGraphicsItem):
             self.setCursor(Qt.OpenHandCursor)
             event.accept()
             return
+        if self._drag_last_scene_pos is not None:
+            self._drag_last_scene_pos = None
+            self.setCursor(Qt.OpenHandCursor if self.editing_vertices else Qt.SizeAllCursor)
         super().mouseReleaseEvent(event)
 
     def hoverMoveEvent(self, event):
         if self.editing_vertices:
             near_vertex = self._vertex_at(event.pos()) is not None
             self.setCursor(Qt.OpenHandCursor if near_vertex else Qt.ArrowCursor)
+        else:
+            # Says the shape can be dragged -- there is nothing else on a zone to
+            # suggest it, and it silently could not be for a long time.
+            self.setCursor(Qt.SizeAllCursor)
         super().hoverMoveEvent(event)
 
     def hoverLeaveEvent(self, event):

@@ -348,6 +348,7 @@ class CanvasView(QGraphicsView):
         self.commit_undo_state = lambda state: None   # push a previously-captured state
         self._pending_move_snapshot = None
         self._move_item = None
+        self._move_start_geometry = None
         self._move_start_pos = None
 
         # No-op until MainWindow replaces it -- lets the grid-density spinbox refresh
@@ -939,6 +940,17 @@ class CanvasView(QGraphicsView):
     # Item types whose boundingRect()/shape() depend on scene-wide values (the icon
     # scale, the zoom, the label font size).
     GEOMETRY_DEPENDENT_TYPES = ("camera", "device", "rack", "custom", "cable")
+
+    @staticmethod
+    def _drag_geometry(item):
+        """What "this item moved" means, for deciding whether a drag earns an undo entry.
+
+        pos() alone is not enough: a zone is positioned by its own points and its pos()
+        never leaves the origin, so a dragged zone looked unmoved and its undo snapshot
+        was thrown away.
+        """
+        points = getattr(item, "points", None)
+        return tuple((pt.x(), pt.y()) for pt in points) if points else None
 
     def apply_scene_geometry_change(self, apply):
         """Runs `apply`, which changes a value every item's bounding rect depends on.
@@ -2001,6 +2013,7 @@ class CanvasView(QGraphicsView):
                     "camera", "device", "rack", "custom", "label", "zone"):
                 self._move_item = clicked_item
                 self._move_start_pos = clicked_item.pos()
+                self._move_start_geometry = self._drag_geometry(clicked_item)
                 self._pending_move_snapshot = self.capture_undo_state()
             else:
                 self._move_item = None
@@ -2288,10 +2301,12 @@ class CanvasView(QGraphicsView):
         # actually ended up somewhere different -- a plain click (no drag) would
         # otherwise push a no-op entry onto the undo stack for every single selection.
         if self._move_item is not None and self._pending_move_snapshot is not None:
-            if self._move_item.pos() != self._move_start_pos:
+            if (self._move_item.pos() != self._move_start_pos
+                    or self._drag_geometry(self._move_item) != self._move_start_geometry):
                 self.commit_undo_state(self._pending_move_snapshot)
         self._move_item = None
         self._pending_move_snapshot = None
+        self._move_start_geometry = None
 
     def mouseDoubleClickEvent(self, event):
         world_pt = self.mapToScene(event.pos())
