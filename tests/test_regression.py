@@ -2282,6 +2282,77 @@ ok("Restore Defaults puts the category back", _term.default_method("camera") == 
 
 _term.clear_defaults()
 
+print("\n== Repaint mode (grey trails on scaled displays) ==")
+from src.core import repaint_mode as _rm
+from PySide6.QtWidgets import QGraphicsView as _QGV, QGraphicsItem as _QGI
+from src.ui import settings_dialog as _sd4
+
+# Partial repaints assume the update region lands on whole device pixels. Windows'
+# 125%/150% scaling breaks that, and the rounding leaves the old paint behind -- grey
+# boxes trailing everything the user drags.
+ok("a whole-number scale keeps partial repaints",
+   all(_rm.choose(dpr) == _rm.PARTIAL for dpr in (1.0, 2.0, 3.0)))
+ok("a fractional scale switches to full repaints",
+   all(_rm.choose(dpr) == _rm.FULL for dpr in (1.25, 1.5, 1.75, 2.5)))
+ok("float fuzz still counts as whole", _rm.choose(1.9999999) == _rm.PARTIAL)
+ok("a nonsense ratio doesn't force full repaints",
+   _rm.choose(None) == _rm.PARTIAL and _rm.choose(0) == _rm.PARTIAL)
+ok("an explicit preference overrides the display",
+   _rm.choose(1.5, _rm.PARTIAL) == _rm.PARTIAL and _rm.choose(1.0, _rm.FULL) == _rm.FULL)
+
+# The view has to actually apply it, for the screen it is on.
+_real_dpr = cv.devicePixelRatioF
+cv.devicePixelRatioF = lambda: 1.5
+cv.set_canvas_repaint_preference(_rm.AUTO)
+ok("a 150% display gets full repaints",
+   cv.viewportUpdateMode() == _QGV.FullViewportUpdate)
+cv.devicePixelRatioF = lambda: 1.0
+cv.set_canvas_repaint_preference(_rm.AUTO)
+ok("a 100% display keeps partial ones",
+   cv.viewportUpdateMode() == _QGV.SmartViewportUpdate)
+cv.set_canvas_repaint_preference(_rm.FULL)
+ok("forcing full works on any display",
+   cv.viewportUpdateMode() == _QGV.FullViewportUpdate)
+cv.devicePixelRatioF = lambda: 1.5
+cv.set_canvas_repaint_preference(_rm.PARTIAL)
+ok("and forcing partial is honoured even at 150%",
+   cv.viewportUpdateMode() == _QGV.SmartViewportUpdate)
+ok("an unknown preference falls back to auto",
+   cv.set_canvas_repaint_preference("sideways") == _rm.FULL)   # still the 1.5 display
+cv.devicePixelRatioF = _real_dpr
+
+# Moving the window to a monitor with a different scale re-decides.
+cv.devicePixelRatioF = lambda: 1.25
+cv.set_canvas_repaint_preference(_rm.AUTO)
+cv.devicePixelRatioF = lambda: 1.0
+cv.event(_QEv(_QEv.Type.DevicePixelRatioChange))
+ok("dragging to an unscaled monitor goes back to partial",
+   cv.viewportUpdateMode() == _QGV.SmartViewportUpdate)
+cv.devicePixelRatioF = _real_dpr
+cv._apply_repaint_mode()
+
+# Full repaints re-draw the floor plan every frame, which is why partial ones were
+# preferred; the plan is cached in device coordinates so that stays affordable.
+fresh()
+_rp_plan = QPixmap(2000, 1500); _rp_plan.fill(QColor("#888888"))
+cv._apply_floorplan_pixmap(_rp_plan, "repaint-probe.png")
+ok("the floor plan is cached in device coordinates",
+   cv.floorplan_item.cacheMode() == _QGI.DeviceCoordinateCache)
+
+_rpdlg = _sd4.SettingsDialog(win)
+ok("Settings exposes the repaint choice",
+   {_rpdlg.repaint_combo.itemData(i) for i in range(_rpdlg.repaint_combo.count())}
+   == set(_rm.PREFERENCES))
+_rpdlg.repaint_combo.setCurrentIndex(_rpdlg.repaint_combo.findData(_rm.FULL))
+_rpdlg.accept()
+ok("choosing Full persists", _sd4.get_str(_sd4.KEY_CANVAS_REPAINT) == _rm.FULL)
+ok("and reaches the canvas", cv.viewportUpdateMode() == _QGV.FullViewportUpdate)
+_rpdlg = _sd4.SettingsDialog(win)
+_rpdlg.restore_defaults(); _rpdlg.accept()
+ok("Restore Defaults puts it back to Auto",
+   _sd4.get_str(_sd4.KEY_CANVAS_REPAINT) == _rm.AUTO)
+QSettings().clear()
+
 print("\n== Zone boxes can be dragged ==")
 # A label/zone box is positioned by its own points, with the item itself parked at the
 # origin -- that is what the project file stores and what duplication translates. It was

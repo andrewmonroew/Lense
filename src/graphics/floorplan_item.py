@@ -12,3 +12,11 @@ class FloorPlanItem(QGraphicsPixmapItem):
         self.setZValue(-100)
         self.setAcceptedMouseButtons(Qt.NoButton) # Click-through
 
+        # Keep the scaled plan in a device-resolution cache instead of re-sampling the
+        # original scan through SmoothPixmapTransform on every repaint. That cost is
+        # the whole reason the canvas preferred partial repaints; on a display where
+        # partial repaints leave trails (see core/repaint_mode.py) the canvas repaints
+        # the full viewport every frame, and without this that would mean re-scaling a
+        # multi-megapixel image continuously while dragging.
+        self.setCacheMode(QGraphicsPixmapItem.DeviceCoordinateCache)
+

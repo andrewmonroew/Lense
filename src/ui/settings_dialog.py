@@ -15,7 +15,7 @@ from PySide6.QtWidgets import (QCheckBox, QComboBox, QDialog, QDialogButtonBox,
                                QGroupBox, QHBoxLayout, QLabel, QPushButton, QScrollArea,
                                QSlider, QSpinBox, QVBoxLayout, QWidget)
 
-from src.core import cable_length, termination, zoom_input
+from src.core import cable_length, repaint_mode, termination, zoom_input
 from src.graphics.cable_item import recalculate_all_cable_offsets
 from src.graphics import label_render
 from src.graphics.icon_scale import (DEFAULT_ICON_SCALE, MAX_ICON_SCALE,
@@ -38,6 +38,7 @@ KEY_FANOUT_MODE = "canvas/fanout_mode"
 KEY_ZOOM_MOUSE = "navigation/zoom_sensitivity_mouse"
 KEY_ZOOM_TOUCHPAD = "navigation/zoom_sensitivity_touchpad"
 KEY_MULTIDROP_CABLES = "cabling/multidrop_auto_cables"
+KEY_CANVAS_REPAINT = "canvas/repaint_mode"
 
 DEFAULTS = {
     KEY_ICON_SCALE: DEFAULT_ICON_SCALE,
@@ -55,6 +56,7 @@ DEFAULTS = {
     KEY_ZOOM_MOUSE: zoom_input.DEFAULT_SENSITIVITY,
     KEY_ZOOM_TOUCHPAD: zoom_input.DEFAULT_SENSITIVITY,
     KEY_MULTIDROP_CABLES: True,
+    KEY_CANVAS_REPAINT: repaint_mode.DEFAULT_PREFERENCE,
 }
 
 # QSettings on some backends hands back "true"/"false" strings rather than bools, which
@@ -209,6 +211,21 @@ class SettingsDialog(QDialog):
         self.fanout_combo.addItem("Latched \u2014 hold one bundle open", "latched")
         self.fanout_combo.addItem("Dynamic \u2014 spread with cursor distance", "dynamic")
         self.fanout_combo.setSizeAdjustPolicy(QComboBox.AdjustToMinimumContentsLengthWithIcon)
+        self.repaint_combo = QComboBox()
+        self.repaint_combo.addItem("Auto \u2014 full repaints on scaled displays",
+                                    repaint_mode.AUTO)
+        self.repaint_combo.addItem("Partial \u2014 fastest, can leave trails at 125%/150%",
+                                    repaint_mode.PARTIAL)
+        self.repaint_combo.addItem("Full \u2014 slowest, never leaves trails",
+                                    repaint_mode.FULL)
+        self.repaint_combo.setToolTip(
+            "Windows display scaling of 125% or 150% can leave grey boxes trailing "
+            "behind whatever you drag.\nAuto detects that and repaints the whole "
+            "canvas; set it to Full by hand if trails persist.")
+        stored_repaint = get_str(KEY_CANVAS_REPAINT)
+        self.repaint_combo.setCurrentIndex(max(0, self.repaint_combo.findData(stored_repaint)))
+        form.addRow("Canvas repaints:", self.repaint_combo)
+
         current = get_str(KEY_FANOUT_MODE)
         self.fanout_combo.setCurrentIndex(max(0, self.fanout_combo.findData(current)))
         self.fanout_combo.setToolTip(
@@ -412,6 +429,8 @@ class SettingsDialog(QDialog):
         self.reopen_last_chk.setChecked(DEFAULTS[KEY_REOPEN_LAST])
         self.confirm_rack_chk.setChecked(DEFAULTS[KEY_CONFIRM_RACK_DELETE])
         self.multidrop_chk.setChecked(DEFAULTS[KEY_MULTIDROP_CABLES])
+        self.repaint_combo.setCurrentIndex(
+            max(0, self.repaint_combo.findData(DEFAULTS[KEY_CANVAS_REPAINT])))
         self.fanout_combo.setCurrentIndex(
             max(0, self.fanout_combo.findData(DEFAULTS[KEY_FANOUT_MODE])))
         self.zoom_mouse_slider.setValue(int(DEFAULTS[KEY_ZOOM_MOUSE] * 100))
@@ -439,6 +458,8 @@ class SettingsDialog(QDialog):
         set_value(KEY_REOPEN_LAST, self.reopen_last_chk.isChecked())
         set_value(KEY_CONFIRM_RACK_DELETE, self.confirm_rack_chk.isChecked())
         set_value(KEY_MULTIDROP_CABLES, self.multidrop_chk.isChecked())
+        set_value(KEY_CANVAS_REPAINT, self.repaint_combo.currentData())
+        self.canvas_view.set_canvas_repaint_preference(self.repaint_combo.currentData())
         self.canvas_view.multidrop_auto_cables = self.multidrop_chk.isChecked()
         set_value(KEY_FANOUT_MODE, self.fanout_combo.currentData())
         mouse_zoom = self.zoom_mouse_slider.value() / 100.0
@@ -485,6 +506,7 @@ def apply_saved_settings(main_window):
     canvas_view.zoom_sensitivity_mouse = zoom_input.clamp_sensitivity(get_float(KEY_ZOOM_MOUSE))
     canvas_view.zoom_sensitivity_touchpad = zoom_input.clamp_sensitivity(get_float(KEY_ZOOM_TOUCHPAD))
     canvas_view.multidrop_auto_cables = get_bool(KEY_MULTIDROP_CABLES)
+    canvas_view.set_canvas_repaint_preference(get_str(KEY_CANVAS_REPAINT))
 
     grid_size = get_float(KEY_GRID_SIZE)
     if grid_size > 0:

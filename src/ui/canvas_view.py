@@ -4,7 +4,7 @@ from PySide6.QtWidgets import (QApplication, QGraphicsView, QGraphicsScene, QInp
                              QGraphicsPixmapItem, QGraphicsItem, QGraphicsLineItem, QGraphicsPathItem, QDialog,
                              QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QComboBox, QPushButton,
                              QWidget, QMenu, QGraphicsEllipseItem)
-from PySide6.QtCore import Qt, QPointF, QRectF, QLineF, Signal
+from PySide6.QtCore import Qt, QEvent, QPointF, QRectF, QLineF, Signal
 from PySide6.QtGui import (QPainter, QPixmap, QPen, QColor, QBrush, QCursor, QKeySequence,
                            QPainterPath, QInputDevice)
 
@@ -20,7 +20,7 @@ from src.graphics.rack_item import RackItem, RackSlot
 from src.core.utils import (distance, format_distance_both, closest_point_on_segment,
                             point_hits_item, segment_intersection,
                             CATALOG_SPEC_MIME_TYPE, ZOOM_STEP)
-from src.core import perf, poe_chain, zoom_input
+from src.core import perf, poe_chain, repaint_mode, zoom_input
 from src.graphics.icon_scale import (
     DEFAULT_ICON_SCALE, MAX_ICON_SCALE, MIN_ICON_SCALE, clamp_icon_scale)
 
@@ -229,12 +229,15 @@ class CanvasView(QGraphicsView):
 
         # View settings
         self.setRenderHints(QPainter.Antialiasing | QPainter.SmoothPixmapTransform | QPainter.TextAntialiasing)
-        # Smart, not Full: repainting the whole viewport on every change re-scales the
-        # entire floor plan bitmap through SmoothPixmapTransform, which on a large scan
-        # is the single biggest cost of dragging anything. Full was previously masking
-        # items painting outside their bounding rects -- see _sync_view_lod, which is
-        # what makes partial updates safe.
-        self.setViewportUpdateMode(QGraphicsView.SmartViewportUpdate)
+        # Partial where it can be trusted, whole-viewport where it can't. Partial
+        # repaints avoid re-scaling the entire floor plan bitmap through
+        # SmoothPixmapTransform on every change, which on a large scan is the single
+        # biggest cost of dragging anything -- but they rely on the update region
+        # landing on whole device pixels, which a fractional display scale breaks.
+        # See core/repaint_mode.py, and _sync_view_lod for what makes partial updates
+        # safe in the first place.
+        self.canvas_repaint_preference = repaint_mode.DEFAULT_PREFERENCE
+        self._apply_repaint_mode()
         self.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
         self.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
         # Matches the "select" branch of set_tool() -- active_tool starts as "select"
@@ -1649,6 +1652,39 @@ class CanvasView(QGraphicsView):
         self._zoom_changed()
 
     # ── Zoom / Pan ──
+    def _apply_repaint_mode(self):
+        """Pick the viewport update mode for the display this window is actually on.
+
+        Re-evaluated whenever that could have changed -- the setting, or the window
+        being dragged to a monitor with a different scale factor.
+        """
+        chosen = repaint_mode.choose(self.devicePixelRatioF(),
+                                     getattr(self, "canvas_repaint_preference",
+                                             repaint_mode.DEFAULT_PREFERENCE))
+        self.setViewportUpdateMode(
+            QGraphicsView.FullViewportUpdate if chosen == repaint_mode.FULL
+            else QGraphicsView.SmartViewportUpdate)
+        return chosen
+
+    def set_canvas_repaint_preference(self, preference):
+        if preference not in repaint_mode.PREFERENCES:
+            preference = repaint_mode.DEFAULT_PREFERENCE
+        self.canvas_repaint_preference = preference
+        return self._apply_repaint_mode()
+
+    def showEvent(self, event):
+        # Only once the window is mapped does it know which screen it is on, and so
+        # what the scale factor is; before that devicePixelRatioF() is the default.
+        super().showEvent(event)
+        self._apply_repaint_mode()
+
+    def event(self, event):
+        # Dragged to a monitor with a different scale: what was safe on one display
+        # may not be on the next.
+        if event.type() == QEvent.Type.DevicePixelRatioChange:
+            self._apply_repaint_mode()
+        return super().event(event)
+
     def _sync_view_lod(self):
         """Publishes the zoom level to the scene and re-indexes anything sized by it.
 
